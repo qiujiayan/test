@@ -1,0 +1,91 @@
+body,html{
+	width: 100%;
+	background: #bdbdbd;
+	height: 100%;
+	overflow: auto;
+}
+.wrap{
+	width: 100%;
+}
+.wrap ul{
+	width: 500px;
+	height: 600px;
+	background: white;
+	margin: 0 auto;
+	margin-top: 100px;
+	overflow: auto;
+}
+.wrap ul .nofile{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 100px;
+}
+.wrap ul .add{
+	width: 480px;
+	height: 60px;
+	border-bottom: 1px solid #bdbdbd;
+	overflow: hidden;
+	position: relative;
+}
+.wrap ul .add img{
+	width: 40px;
+	height: 40px;
+	margin-left:200px;
+	margin-top: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+.wrap ul .add .upfilehidden{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 200px;
+	top: 10px;
+	opacity: 0;
+}
+.wrap ul .add .upfilename{
+	position: absolute;
+	width: 140px;
+	height: 40px;
+	left: 50px;
+	top: 10px;
+	background: #efefef;
+	border-radius: 5px;
+	/*display: none;*/
+}
+.wrap ul .add span{
+	font-size: 16px;
+	color: #979797;
+}
+.wrap ul li{
+	width: 460px;
+	padding: 10px;
+	height: 60px;
+	border-bottom: 1px solid #bdbdbd;
+}
+.wrap ul li .left,.wrap ul li .right{
+	float: left;
+}
+.wrap ul li .left{
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+}
+.wrap ul .left img{
+	width: 60px;
+	height: 60px;
+}
+.wrap ul .right{
+	width: 380px;
+}
+.wrap ul .right .toptitle{
+	line-height: 20px;
+	font-size: 14px;
+}
+.wrap ul .right .time{
+	float: right;
+}
+.wrap ul .right .uppeople{
+	line-height: 60px;
+	font-size: 14px;
+}

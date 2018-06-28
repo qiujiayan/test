@@ -1,0 +1,119 @@
+<div class="chatBox">
+  <div class="chatBoxInner client" id="chatMain">
+    <!--header-->
+    <div class="box_hd">
+      <div class="clientHd"></div>
+        <div class="title_wrap">
+            <a class="phone_return"  ng-show="$parent.showState.isPhone" ng-click="back()"><span class="backArrow"></span>返回</a>
+
+            <div class="title">
+                <a class="title_name chat_title" ng-click="tofriendinfo()">{{currentConversation.title}}</a>
+                <span class="title_count "></span>
+                <i class="Presence Presence--stacked Presence--chatBox" ng-show="currentConversation.targetType==4"></i>
+            </div>
+
+						<a class="upeditBtn"  target="_blank" ng-click="upCommunityFiles()" ng-show="currentConversation.targetType==3 ||currentConversation.targetType==4">群文件</a>
+           <!-- <a class="editBtn" href="javascript:void 0" ui-sref="main.discussioninfo({discussionid: currentConversation.targetId, conversationtype: currentConversation.targetType})" ng-show="currentConversation.targetType==2">设置</a>-->
+        </div>
+    </div>
+    <!-- content -->
+    <div id="Messages" class="beautscroll" ng-class="{messagesload:messagesloading}">
+      <conversation-item ng-repeat="conversationitem in conversationServer.conversationMessageListShow" item='conversationitem'>
+
+      </conversation-item>
+
+    </div>
+    <!-- inputBox -->
+    <div class="inputBox">
+        <div ng-if="mainData.isTyping">
+          <div class="typingIcon"><i></i><i></i><i></i></div>
+        </div>
+        <div id="MessageForm" class="">
+            <div id="MessageForm-header">
+                <div class="MessageForm-tool">
+                  <i class="iconfont-smile" ng-click="showemoji=!showemoji"></i>
+                  <div class="expressionWrap" ng-show="showemoji"><i class="arrow"></i>
+                    <emoji ng-repeat="item in emojiList" item="item" content="msgvalue"></emoji>
+                  </div>
+                </div>
+                <div class="MessageForm-tool" ng-show="showCutScreen">
+                    <i class="screen_shot" id="screen_shot" style="position: relative; z-index: 1;" ng-click="takeScreenShot()"></i>
+                </div>
+                <div class="MessageForm-tool">
+                	<!--<input type="file" id="upload-file" style="width: 100%;height: 100%;position: absolute;z-index: 999;"/>-->
+                	<!--<input type="file" id="upload-file2" style="width: 100%;height: 100%;position: absolute;z-index: 999;opacity: 0;" onchange="angular.element(this).scope().chuploadfile()"/>-->
+                	<i class="iconfont-upload" id="upload-image"
+                                                 style="position: relative; z-index: 1;" >
+                                                <!-- <input type="file" nv-file-select="" uploader="uploader" name="" id="imgfile-id" onchange="angular.element(this).scope().chuploadfile()" style="size:20px;width:20px;height:20px;display:inline-block;cursor: pointer;filter:alpha(opacity=0);opacity:0;">-->
+                                               </i>
+
+                    <div class="moxie-shim moxie-shim-html5"
+                         style="position: absolute; top: 5px; left: 0px; width: 20px; height: 15px; overflow: hidden; z-index: 0;">
+                        <!-- <input type="file"
+                               style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                               multiple="" accept=""> -->
+                    </div>
+                </div>
+                <div class="MessageForm-tool" style="width: 20px;height: 20px;">
+                    	 <!--<input type="file" id="upload-file" style="width: 100%;height: 100%;position: absolute;z-index: 999;"/>-->
+                    	 <!--<input type="file" id="upload-file2" style="width: 100%;height: 100%;position: absolute;z-index: 999;opacity: 0;" onchange="angular.element(this).scope().chuploadfile()"/>-->
+                       <i class="file_shot" id="upload-file" style="position: relative; z-index: 1;" ng-click="">
+                    </i>
+                </div>
+            </div>
+            <div class="progress-wrapper ng-isolate-scope" ng-show="uploadStatus.show"><span class="progress-text ng-binding">正在上传: {{uploadStatus.progress}}</span>
+                <div class="progress">
+                    <div class="progress-bar" ng-style="{width:uploadStatus.progress}"></div>
+                </div>
+                <a class="progress-cancel" ng-click="uploadStatus.cancle()">取消</a>
+            </div>
+            <!-- <span class="MessageForm-status ng-binding ng-scope " style="">正在输入……</span>
+            <span class="MessageForm-status ">正在重新连接……</span> -->
+        </div>
+        <div class="MessageForm-appearance active">
+            <div id="TestInput"></div>
+            <pre  id="message-content" style='background-color: rgba(0,0,0,0);
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+                white-space: pre-wrap;'
+            ng-focus="showemoji=fase"  ng-model="currentConversation.draftMsg"
+            contenteditable="true" contenteditable-dire ctrl-enter-keys atshow-dire fun="sendBtn()" ctrlenter="false" placeholder="请输入文字..." ondrop="return false;"></pre>
+            <a class="sendBtn" href="javascript:void 0" ng-click="sendBtn()">发送</a>
+            <div class="arobase" ng-show="atShow" id="atList">
+              <ul>
+                  <li ng-repeat="item in showGroupList" ng-click="moveToItem(this);selectMember(item)">
+                      <img ng-src="{{item.imgSrc||'assets/img/barBg.png'}}">
+                      <span class="involvesName">{{item.name}}</span>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    
+    // 滚动条
+    // function BeautScroll(){
+    //     $('.beautscroll').niceScroll({
+    //         cursorcolor: "#363636",//#CC0071 光标颜色
+    //         cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+    //         touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+    //         cursorwidth: "8px", //像素光标的宽度
+    //         cursorborder: "0", // 游标边框css定义
+    //         cursorborderradius: "5px",//以像素为光标边界半径
+    //         autohidemode: true //是否隐藏滚动条
+    //     });
+    // } 
+    $('.beautscroll').niceScroll({
+            cursorcolor: "#d6d6d6",//#CC0071 光标颜色
+            cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+            touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+            cursorwidth: "8px", //像素光标的宽度
+            cursorborder: "0", // 游标边框css定义
+            cursorborderradius: "5px",//以像素为光标边界半径
+            autohidemode: true //是否隐藏滚动条
+        }); 
+</script>
