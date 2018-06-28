@@ -1,0 +1,103 @@
+img{
+	width: 400px;
+	/*height: 220px;*/
+}
+.index-one .index-name{
+	display: inline-block;
+	width: 100px;
+}
+.through-wrap,.nothrough-wrap{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.2);
+	z-index: 9998;
+	display: none;
+}
+.card-img{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.4);
+	z-index: 9990;
+	text-align: center;
+	display: none;
+}
+.card-img img{
+	width: auto;
+	height: 80%;
+	position: absolute;
+	z-index: 9998;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	display:block;
+}
+.card-img .closebtn{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	background: #438eb9;
+	border-radius: 5px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 9999;
+	color: white;
+	left: 50%;
+	bottom: 5%;
+	margin-left: -50px;
+}
+.through-div,.nothrough-div{
+	padding: 20px 40px;
+	width: 320px;
+	height: 180px;
+	background: rgba(0,0,0,.7);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -160px;
+	margin-top: -80px;
+	z-index: 9999;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+.nothrough-div{
+	padding: 5px 10px;
+	width: 452px;
+	height: 320px;
+	margin-left: -226px;
+	margin-top: -160px;
+}
+.nothrough-div textarea{
+	width: 80%;
+	height: 50%;
+	margin-bottom: 10px;
+	resize: none;
+	overflow-y: auto;
+	font-size: 18px;
+}
+.through-div h3,.nothrough-div h3{
+	line-height: 80px;
+}
+.through-div .through-confirm,.through-div .through-cancel,
+.nothrough-div .nothrough-confirm,.nothrough-div .nothrough-cancel{
+	width: 100px;
+	line-height: 40px;
+	background: #ffae00;
+	border-radius: 5px;
+	float: left;
+	margin-right: 40px;
+	cursor: pointer;
+}
+.nothrough-div .nothrough-confirm{
+	margin-left: 20%;
+}
+.through-div .through-cancel,
+.nothrough-div .nothrough-cancel{
+	margin-right: 0;
+}
+.index-text{font-size:12px!important;}

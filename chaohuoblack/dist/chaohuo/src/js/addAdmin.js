@@ -1,0 +1,1 @@
+!function(n){n(function(){var e,a;n(document).on("click",".index-lei-que",function(){e=n("input[name=username]").val(),a=n("input[name=password]").val(),console.log(e+","+a),adminUserRegiste(e,a,function(e){console.log(e),1==e.code?(alert("添加成功"),n("input[name=username]").val(""),n("input[name=password]").val("")):alert("错误信息"+e.msg)})})})}(jQuery);

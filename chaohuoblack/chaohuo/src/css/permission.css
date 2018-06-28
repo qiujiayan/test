@@ -1,0 +1,22 @@
+.index-name{
+	display: inline-block;
+	width: 140px;
+	margin-bottom: 20px;
+}
+.peimission-confirm{
+	background: #438eb9;
+    color: white;
+    width: 100px;
+    line-height: 26px;
+	margin-left: 40%;
+}
+.editor-confirm,.editor-concel{
+	background: #438eb9;
+    color: white;
+    width: 100px;
+    line-height: 26px;
+    margin: 20px 0 0 40px;
+}
+.permission-editor{
+	display: none;
+}

@@ -1,0 +1,1 @@
+!function(n){n(function(){var n=getQueryString("listid");checkList(n,function(){console.log(11)})})}(jQuery);

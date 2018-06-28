@@ -1,0 +1,110 @@
+img{
+	width: 400px;
+	height: 220px;
+}
+.index-one .index-name{
+	display: inline-block;
+	width: 100px;
+}
+.through-wrap,.nothrough-wrap{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.2);
+	z-index: 9998;
+	display: none;
+}
+.through-div,.nothrough-div{
+	padding: 20px 40px;
+	width: 320px;
+	height: 180px;
+	background: rgba(0,0,0,.7);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -160px;
+	margin-top: -80px;
+	z-index: 9999;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+/*.through-wrap{
+	display: block;
+}*/
+.through-div{
+	padding: 20px 40px;
+	width: 400px;
+	height: 180px;
+}
+.nothrough-div{
+	padding: 5px 10px;
+	width: 452px;
+	height: 160px;
+	margin-left: -226px;
+	margin-top: -160px;
+}
+.nothrough-div textarea{
+	width: 80%;
+	height: 50%;
+	margin-bottom: 10px;
+	resize: none;
+	overflow-y: auto;
+	font-size: 18px;
+}
+.through-div h3,.nothrough-div h3{
+	line-height: 80px;
+}
+.through-div .through-confirm,.through-div .through-cancel,
+.nothrough-div .nothrough-confirm,.nothrough-div .nothrough-cancel{
+	width: 100px;
+	line-height: 40px;
+	background: #ffae00;
+	border-radius: 5px;
+	float: left;
+	margin-right: 40px;
+	cursor: pointer;
+}
+.through-div .through-confirm,.through-div .through-cancel{
+	margin-left: 40px;
+	margin-right: 0;
+}
+.nothrough-btn{
+	width: 100px;
+	line-height: 40px;
+	background: #ffae00;
+	border-radius: 5px;
+	float: left;
+	margin-left: 40px;
+	cursor: pointer;
+}
+.nothrough-div .nothrough-confirm{
+	margin-left: 20%;
+}
+.through-div .through-cancel,
+.nothrough-div .nothrough-cancel{
+	margin-right: 0;
+}
+/*.index-table .editorStatus{
+	display: inline-block;
+	width: 40px;
+	line-height: 20px;
+	text-align: center;
+	background: #438eb9;
+	color: white;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-right: 20px;
+}*/
+.index-table .editorStatus{
+	display: inline-block;
+	width: 40px;
+	line-height: 20px;
+	text-align: center;
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-right: 20px;
+}

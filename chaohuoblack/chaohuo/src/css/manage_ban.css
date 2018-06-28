@@ -1,0 +1,103 @@
+.manage-banner-add{
+	display: block;
+}
+.manage-banner-add .banner-img{
+	width: 200px;
+	height: 150px;
+}
+.manage-banner-add .index-row span{
+	display: inline-block;
+	width: 100px;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 20px;
+}
+/* .manage-banner-addios .index-row span{
+	display: inline-block;
+	width: 100px;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 20px;
+} */
+.manage-banner-add .index-row .manage-upa{
+	position: relative;
+	width: 100px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	background:#438eb9;
+ 	color:#fff;
+ 	border-radius: 5px;
+}
+/* .manage-banner-addios .index-row .manage-upa{
+	position: relative;
+	width: 100px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	background:#438eb9;
+ 	color:#fff;
+ 	border-radius: 5px;
+} */
+.manage-banner-add .index-row .manage-upa .manage-upa-file{
+	position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100px;
+}
+
+/* .manage-banner-addios .index-row .manage-upa .manage-upa-file-ios{
+	position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100px;
+} */
+
+.page-content .index-one textarea{
+	resize: none;
+	height: 200px;
+	float: none;
+}
+.manage-banner-add{
+	display: none;
+}
+.add-version{
+	display: inline-block;
+	width: 140px;
+	line-height: 30px;
+	text-align: center;
+	background: #438eb9;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.addios-version{
+	display: inline-block;
+	width: 128px;
+	line-height: 30px;
+	text-align: center;
+	background: #438eb9;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.version-con{
+	margin-left: 30%;
+}
+.modify-upa-file{
+	position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100px;
+}
+.manage-banner-edi .index-row .modify-appName{
+	width: 46%;
+}
+
+.appName{
+	margin-right: 15px;
+    height: 30px;
+}

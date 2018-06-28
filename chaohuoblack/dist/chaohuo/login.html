@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>超火后台登录</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="src/css/index-5ad1751fc4.css" />
+	</head>
+
+	<body class="login-layout light-login">
+		<div class="main-container col-sm-12">
+			<div class="main-content">
+				<div class="row ch-login-wrap">
+					<div class="col-sm-12">
+						<div class="login-container ch-login-container">
+							<div class="center">
+								<h1>
+									<!--<i class="ace-icon fa fa-leaf green"></i>-->
+									<span class="white" id="id-text2">超火后台管理系统</span>
+								</h1>
+							</div>
+
+							<div class="position-relative ch-position-relative">
+								<div id="login-box" class="login-box visible widget-box no-border">
+									<div class="widget-body">
+									<div class="widget-main ch-widget-main">
+											<h3>用户登录</h3>
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control username" placeholder="用户名" />
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control userword" placeholder="密码" />
+															<i class="ace-icon fa fa-lock"></i>
+														</span>
+													</label>
+
+													<div class="space"></div>
+
+													<div class="clearfix">
+														
+															<input type="checkbox" class="login-check"/>记住我
+															<!--<span class="lbl">记住我</span>-->
+													
+
+														<button type="button" class="width-35 pull-right btn btn-sm btn-primary user-login">
+															<i class="ace-icon fa fa-key"></i>
+															<span class="bigger-110">登录</span>
+														</button>
+													</div>
+
+													<div class="space-4"></div>
+												</fieldset>
+											</form>
+										</div><!-- /.widget-main -->
+
+									</div><!-- /.widget-body -->
+								</div><!-- /.login-box -->
+
+							</div><!-- /.position-relative -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.main-content -->
+		</div><!-- /.main-container -->
+		
+		
+		<div class="ch-logo col-sm-4"></div>
+		<!--<div class="ch-footer">江苏触网信息技术有限公司</div>-->
+
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script src="./src/vendor/md5.js"></script>
+		<script src="./src/vendor/jquery.cookie.js"></script>
+		<script src="./src/js/commonApi-358a59e909.js"></script>
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+
+		<script type="text/javascript">
+			jQuery(function($) {
+			 $(document).on('click', '.toolbar a[data-target]', function(e) {
+				e.preventDefault();
+				var target = $(this).data('target');
+				$('.widget-box.visible').removeClass('visible');//hide others
+				$(target).addClass('visible');//show target
+			 });
+			});
+			
+			
+			
+			//you don't need this, just used for changing background
+			jQuery(function($) {
+			 $('#btn-login-dark').on('click', function(e) {
+				$('body').attr('class', 'login-layout');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-light').on('click', function(e) {
+				$('body').attr('class', 'login-layout light-login');
+				$('#id-text2').attr('class', 'grey');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-blur').on('click', function(e) {
+				$('body').attr('class', 'login-layout blur-login');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'light-blue');
+				
+				e.preventDefault();
+			 });
+			 
+			});
+		</script>
+		<script>
+			(function($){
+				//var passWord = md5.hex_md5(userpass);
+				$(function(){
+		            /*if ($.cookie("rmbUser") == "true") {  
+			            $(".login-check").attr("checked", true);  
+			            $(".username").val($.cookie("usernameq"));  
+			            $(".userword").val($.cookie("passwordq"));  
+			            location.href = "index.html";
+		            } */  
+			      
+			        //记住用户名密码7天免登陆 
+			        function Save() {  
+			            if ($('.login-check').is(':checked')) {  
+			                var str_username = $(".username").val();  
+			                var str_password = $(".userword").val();  
+			                str_password = hex_md5(str_password);
+			                $.cookie("rmbUser", "true", { expires: 1 }); //存储一个带7天期限的cookie  
+			                //$.cookie("usernameq", str_username, { expires: 7 });  
+			                $.cookie("passwordq", str_password, { expires: 1 });  
+			            }  
+			            else { 
+			            	var str_username = $(".username").val();
+			                //$.cookie("usernameq", str_username, { expires: -1 });  
+			                $.cookie("rmbUser", "false", { expire: -1 });  
+			                $.cookie("passwordq", "", { expires: -1 });  
+			            }  
+			        }; 
+					
+					
+					$('.user-login').on('click',function(){
+						//console.log(1)
+						//console.log($('.login-check').is(':checked'));是否记住登录
+						
+						var oUsername = $('.username').val();
+						var oUserWord = $('.userword').val();
+						Login(oUserWord,oUsername,function(reqs){
+							console.log(reqs);
+							if(reqs.code == 1){
+								$.cookie("tokenid",reqs.content.token);		
+								$.cookie("usernameq",oUsername);
+								Save();                                   //del
+								if(reqs.content.roleName=="ADMIN"){			//del
+									location.href="index.html";				//del
+								}											//del
+								var roleModel = reqs.content.roleModelValues;
+								roleModel = roleModel.substring(1,roleModel.length-1);
+								localStorage.setItem("role",reqs.content.roleName);
+								localStorage.setItem("roleModel",roleModel);
+								
+								
+								//根据角色跳转相关页面
+								var oArr =new Array();
+								var roleModel = localStorage.getItem("roleModel");
+								oArr = roleModel.split(',');
+								if(roleModel!=''){
+									for(var i=0;i<oArr.length;i++){
+										oArr[i] = oArr[i].substring(0,oArr[i].length-1).trim();
+										console.log('.'+oArr[i]);
+										$('.'+oArr[i]).css('display','block');
+										location.href = oArr[0]+".html";
+									}		
+								}else{
+									alert("您还没有权限操作，请联系超级管理员~");
+								}
+								//location.href = "index.html";
+								//if($('.login-check').is(':checked')){
+									Save();//记住用户名密码
+								//}
+							}else{
+								alert(reqs.msg);
+							}
+						})
+					})
+					
+				})
+			})(jQuery)
+		</script>
+	</body>
+</html>

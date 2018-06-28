@@ -1,0 +1,45 @@
+.index-name{
+	display: inline-block;
+	width: 100px;
+}
+.index-lei-que{
+	margin-left: 30%;
+}
+.permission-list{
+	display: inline-block;
+	margin-right: 20px;
+}
+.permission-confirm,.permission-concel{
+	background: #438eb9;
+    color: white;
+    width: 100px;
+    line-height: 26px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.roles-editor{
+	display: none;
+}
+.index-table td span{
+	display: inline-block;
+	width: 80px;
+	line-height: 20px;
+	text-align: center;
+	background: #438eb9;
+	color: white;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-right: 20px;
+}
+.role-confirm,.role-delete,.role-concel{
+	background: #438eb9;
+    color: white;
+    width: 100px;
+    height: 30px;
+    line-height: 26px;
+    margin-right: 10px;
+}
+.role-permission p{
+	display: inline-block;
+	margin-right: 16px;
+}

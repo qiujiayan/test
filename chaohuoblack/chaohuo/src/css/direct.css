@@ -1,0 +1,25 @@
+.direct-input{
+	float: none;
+	height: 30px;
+}
+.index-img img{
+	width: 100px;
+	height: 60px;
+}
+.lives-cancel{
+	margin-left: 35%;
+}
+.lives-logo{
+	width: 300px;
+	height: 180px;
+}
+.direct-edi .index-row span, .direct-detail .index-row span{
+	text-align: initial;
+}
+.direct-edi .index-row .lives-name, 
+.direct-detail .index-row .lives-name,
+.direct-edi .index-row .lives-address, 
+.direct-detail .index-row .lives-address{
+	width: auto;
+}
+

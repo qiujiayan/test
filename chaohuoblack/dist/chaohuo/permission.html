@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>超火后台管理系统</title>
+
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="src/css/index-5ad1751fc4.css" />
+		<link rel="stylesheet" href="src/css/permission-e7dba3c979.css" />
+		
+		<script src="assets/js/ace-extra.min.js"></script>
+
+	</head>
+
+	<body class="no-skin">
+		<div class="delete-wrap">
+			<div class="delete-div">
+				<h3>确认删除吗？</h3>
+				<div class="delete-confirm">确认</div>
+				<div class="delete-cancel">取消</div>
+			</div>	
+		</div>
+		<div id="navbar" class="navbar navbar-default ace-save-state"></div>
+
+		<div class="main-container ace-save-state" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.loadState('main-container')}catch(e){}
+			</script>
+
+			<div id="sidebar" class="sidebar  ace-save-state">
+				<script type="text/javascript">
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
+			</div>
+
+			<div class="main-content">
+				<div class="main-content-inner permission-list">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">系统管理</a>
+							</li>
+							<li class="active">权限管理</li>
+							<li class="active">权限模块</li>
+						</ul>
+						<span class="index-shuaxin">刷新</span>
+					</div>
+
+					<div class="page-content">
+						<div class="container-fluid index-one">
+							<div class="row index-title"><h3>平台权限模块添加:</h3></div>
+							<div class="row index-row">
+								<span class="index-name">权限模块名字：</span>
+								<input type="text" class="index-text col-md-5 col-sm-5 col-xs-8 permission-string" placeholder="请输入平台权限模块名字"/>
+							</div>
+							<div class="row index-row">
+								<span class="index-name">权限模块标识：</span>
+								<input type="text" class="index-text col-md-5 col-sm-5 col-xs-8 permission-url" placeholder="请输入权限模块标识"/>
+							</div>
+							<!--<div class="row index-row">
+								<span class="index-name">权限模块状态：</span>
+								<select class="index-text col-md-5 col-sm-5 col-xs-8" name="全部状态">
+								  <option value ="1">上线</option>
+								  <option value ="2">下线</option>
+								</select>
+							</div>-->
+							
+							<button class="peimission-confirm">确认</button>
+							<div class="row">
+			 					<div class="col-md-11 col-sm-11 col-xs-16">
+			 						<table class="table table-bordered index-table" >
+			 							<!--<caption align="top">权限模块列表</caption> 
+			 							<tr><td>所有权限</td><td>标识</td><td>状态</td><td>修改</td></tr>
+			 							<tr><td>1</td><td>2</td><td>2</td><td><span class="index-editor">修改</span></td></tr>-->
+			 						</table>
+			 					</div>
+							</div>
+						</div>
+					</div>					
+				</div>	
+				
+				<div class="main-content-inner permission-editor">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">系统管理</a>
+							</li>
+							<li class="active">权限管理</li>
+							<li class="active">权限模块</li>
+							<li class="active">权限模块修改</li>
+						</ul>
+						<span class="index-shuaxin">刷新</span>
+					</div>
+					<div class="page-content" style="margin-left: 30%;margin-top: 5%;">
+						<div class="row index-row">
+							<div class="row index-row">
+								<span class="index-name">模块名字：</span>
+								<input type="text" placeholder="要修改的模块名字" class="index-text col-md-3 col-sm-2 col-xs-8 module-name"/>
+							</div>
+							<div class="row index-row">
+								<span class="index-name">模块标识：</span>
+								<input type="text" placeholder="要修改的标识" class="index-text col-md-3 col-sm-2 col-xs-8 module-info"/>
+							</div>
+							<div class="row index-row">
+								<span class="index-name">模块状态：</span>
+								<select class="index-text col-md-3 col-sm-3 col-xs-5" name="module-status">
+								  <option value ="1">上线</option>
+								  <option value ="0">下线</option>
+								  <option value ="-1">删除</option>
+								</select>
+							</div>
+
+							<button class="editor-confirm">确认</button>
+							<button class="editor-concel">取消</button>
+							
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
+		<script src="./src/js/permissionApi-f0943e5020.js"></script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.easypiechart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.index.min.js"></script>
+		<!--<script src="assets/js/jquery.flot.min.js"></script>
+		<script src="assets/js/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/jquery.flot.resize.min.js"></script>-->
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+		<script src="src/js/index_common-ed7a0f6817.js"></script>
+		<script src="src/js/permission-927ceb74e0.js"></script>
+		<script src="src/js/paper-ca1e84103d.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('.easy-pie-chart.percentage').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+					var size = parseInt($(this).data('size')) || 50;
+					$(this).easyPieChart({
+						barColor: barColor,
+						trackColor: trackColor,
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: parseInt(size/10),
+						animate: ace.vars['old_ie'] ? false : 1000,
+						size: size
+					});
+				})
+			
+				$('.sparkline').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+					$(this).sparkline('html',
+									 {
+										tagValuesAttribute:'data-values',
+										type: 'bar',
+										barColor: barColor ,
+										chartRangeMin:$(this).data('min') || 0
+									 });
+				});
+			
+
+			  var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+			  var data = [
+				{ label: "social networks",  data: 38.7, color: "#68BC31"},
+				{ label: "search engines",  data: 24.5, color: "#2091CF"},
+				{ label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+				{ label: "direct traffic",  data: 18.6, color: "#DA5430"},
+				{ label: "other",  data: 10, color: "#FEE074"}
+			  ]
+
+				$(document).one('ajaxloadstart.page', function(e) {
+					$tooltip.remove();
+				});
+			
+			
+			
+			
+				var d1 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d1.push([i, Math.sin(i)]);
+				}
+			
+				var d2 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d2.push([i, Math.cos(i)]);
+				}
+			
+				var d3 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.2) {
+					d3.push([i, Math.tan(i)]);
+				}
+				
+			
+				var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+
+				var agent = navigator.userAgent.toLowerCase();
+				if(ace.vars['touch'] && ace.vars['android']) {
+				  $('#tasks').on('touchstart', function(e){
+					var li = $(e.target).closest('#tasks li');
+					if(li.length == 0)return;
+					var label = li.find('label.inline').get(0);
+					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+				  });
+				}
+			
+				$('#tasks').sortable({
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'draggable-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer',
+					stop: function( event, ui ) {
+						//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+						$(ui.item).css('z-index', 'auto');
+					}
+					}
+				);
+				$('#tasks').disableSelection();
+				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+					if(this.checked) $(this).closest('li').addClass('selected');
+					else $(this).closest('li').removeClass('selected');
+				});
+			
+			
+				//show the dropdowns on top or bottom depending on window height and menu position
+				$('#task-tab .dropdown-hover').on('mouseenter', function(e) {
+					var offset = $(this).offset();
+			
+					var $w = $(window)
+					if (offset.top > $w.scrollTop() + $w.innerHeight() - 100) 
+						$(this).addClass('dropup');
+					else $(this).removeClass('dropup');
+				});
+			
+			})
+		</script>
+	</body>
+</html>
