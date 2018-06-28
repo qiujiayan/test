@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="超火">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="telephone=no" name="format-detection">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<title>提现</title>
+	<link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+	<script src="../vendor/sea.js"></script>
+	<script src="../vendor/config.js"></script>
+	<script src="../vendor/resourceLoad.js"></script>
+	<script src="../vendor/rem.js"></script>
+	<link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/forApp/cash.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/forApp/zhifu-cash.css" rel="styleSheet" />
+</head>
+
+<body>
+	<header style="background: #262626;">
+		<span style="float: left;font-size: .36rem;" onclick="history.back();">
+			<span class="iconfont">&#xe60b;</span>
+		</span>
+		<span style="margin-left: -.18rem;">提现</span>
+	</header>
+	<div class="cashwrap">
+		<div class="cashname">请输入提现金额</div>
+		<div class="cashdetail">
+			<div class="money">
+				<span>￥</span>
+				<input type="tel" placeholder="最低提现金额100.00" class="mymoney" onkeyup="value=value.replace(/[^\d\.]/g,'')" />
+			</div>
+		</div>
+		<div class="infactmoney">可提现金额
+			<span id="balance"></span>
+		</div>
+	</div>
+	<div class="zfbcash">
+		<p class="zfbtitle">提现账户</p>
+		<div class="zfbpay">
+			<div style="display: inline-block;width: 25%;" class="modifyzfb">
+				<img src="../static/images/share/zfb.png" class="zfbpng" />
+				<span>支付宝</span>
+			</div>
+			<img src="../static/images/share/check.png" class="zfbpay-check" />
+		</div>
+	</div>
+	<!--	<div class="addmiddle">
+		<p class="title">提现账户信息</p>
+		<p class="zfbname"></p>
+		<p class="zfbnum"></p>
+	</div>-->
+	<div class="account">
+		<span class="left">到账时间</span>
+		<span style="color: #979797;" class="right">七个工作日内</span>
+	</div>
+	<div class="account2">
+		<span class="left">手续费</span>
+		<span style="color: #FD3422;" class="right charge">
+			<span class="chargem"></span>
+			<span style="color: #000;">元</span>
+		</span>
+	</div>
+	<div class="cashbtnwrap">
+		<div class="cashbtn">
+			提现
+		</div>
+	</div>
+
+	<!--未绑定密码-->
+	<div class="bindbg">
+		<div class="bindWrap">
+			<div class="top">
+				<p class="p1">为了您的账号安全</p>
+				<p>请先设置交易密码</p>
+			</div>
+			<div class="bottom">
+				<div class="left">取消</div>
+				<div class="right">确认</div>
+			</div>
+		</div>
+	</div>
+
+	<!--输入提现密码-->
+	<div class="passwordBg" style="z-index:999;">
+		<div class="passwordWrap">
+			<div class="top">
+				请输入交易密码
+				<span>X</span>
+			</div>
+			<div class="bottom">
+				<p class="title">提现</p>
+				<p class="money">元</p>				
+				<ul class="mm_box">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<p class="payFee">额外扣除￥
+					<span></span>手续费</p>
+			</div>
+		</div>
+		<div class="numb_box">
+			<div class="xiaq_tb">
+				<img src="../static/images/share/jftc_14.jpg" height="10">
+			</div>
+			<ul class="nub_ggg">
+				<li>
+					<a href="javascript:void(0);" class="zf_num">1</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">2</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">3</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">4</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">5</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">6</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">7</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">8</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">9</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_empty">清空</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">0</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_del">删除</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
+<script>
+	seajs.use('../static/js/forApp/cash');
+</script>

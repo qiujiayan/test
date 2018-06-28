@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="超火">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>支付中心</title>
+    <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+    <script src="../vendor/sea.js"></script>
+    <script src="../vendor/config.js"></script>
+    <script src="../vendor/resourceLoad.js"></script>
+    <script src="../vendor/rem.js"></script>
+    <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/paymentCenter.css" rel="styleSheet" />
+
+</head>
+
+<body>
+    <header>
+        <!-- <span class="headleft helpback">
+            <span class="iconfont">&#xe60b;</span>
+        </span>
+        <span class="headright">支付中心</span> -->
+
+
+        <span style="float: left;font-size: .36rem;" onclick="history.back();"><span class="iconfont">&#xe60b;</span></span>
+		<span style="margin-left: -.18rem;" class="bdzfb">支付中心</span>
+
+    </header>
+    <!-- <p class="helptitle">操作说明：</p> -->
+    <!-- <div class="question question1">
+        <a href="modifyPassword.html">
+            <span>修改支付密码</span>
+            <span style="float: right;color: #BDBDBD;" class="iconfont">&#xe610;</span>
+        </a>
+    </div> -->
+
+    <div class="question question1">
+        <a href="javascript:;">
+            <span>修改支付密码</span>
+            <span style="float: right;color: #BDBDBD;" class="iconfont">&#xe610;</span>
+        </a>
+    </div>
+
+    <div class="question question2">
+        <a href="javascript:;">
+            <span>找回支付密码</span>
+            <span style="float: right;color: #BDBDBD;" class="iconfont">&#xe610;</span>
+        </a>
+    </div>
+
+    <div class="question question3">
+        <a href="walletquestion.html">
+            <span>问题</span>
+            <span style="float: right;color: #BDBDBD;" class="iconfont">&#xe610;</span>
+        </a>
+    </div>
+
+    <div class="prompt">
+        <div class="pop_bg"></div>
+        <div class="pop_con">
+            <div class="prompt_text">
+                <span class="prompt_text_w">为了您的账号安全,
+                    <br/>请先设置支付密码</span>
+            </div>
+            <div class="prompr_determine">
+                <span class="none_but">取消</span>
+                <span class="ok_but">确定</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    seajs.use('../static/js/forApp/paymentCenter');
+</script>

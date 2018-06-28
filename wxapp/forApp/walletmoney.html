@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="超火">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="telephone=no" name="format-detection">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<title>提现</title>
+	<link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+	<script src="../vendor/sea.js"></script>
+	<script src="../vendor/config.js"></script>
+	<!-- <script src="../vendor/resourceLoad.js"></script> -->
+	<script src="../vendor/rem.js"></script>
+	<link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/forApp/walletmoney.css" rel="styleSheet" />
+
+</head>
+
+<body>
+	<!-- <header>
+		<span style="float: left;font-size: .36rem;" class="iosback iconfont"><span class="iconfont">&#xe60b;</span></span>
+		<span style="margin-left: 1.22rem;">提现</span>
+		<a href="walletquestion.html"><span>常见问题</span></a>
+	</header> -->
+	<div class="wrap">
+		<span style="float: left;margin-left: .10rem;font-size: .36rem;" class="iosback iconfont">
+			<span class="iconfont">&#xe60b;</span>
+		</span>
+		<span style="margin-left: 1.22rem;">提现</span>
+		<!-- <a href="walletquestion.html"> -->
+		<a href="javascript:;">
+			<!-- <span class="put-forward">常见问题</span> -->
+			<span class="put-forward" id="link"><img src="../static/images/share/more.png"/></span>
+		</a>
+		<!-- <div class="question">
+			<a href="walletquestion.html">?</a>
+		</div> -->
+	</div>
+	<div class="total_amount">
+		<div class="total">
+			<h4>总金额</h4>
+		</div>
+		<div class="totalmoney">
+			<span></span><b>元</b>
+
+		</div>
+
+		<div class="drawcash">
+		</div>
+		<div class="drawcash2">
+			<span>提现</span>
+		</div>
+
+		<div class="error_mass">
+			<p>金额不足100元，不可提现</p>
+		</div>
+	</div>
+
+	<div class="detailwrap">
+		<!-- <div class="detailheader">
+			明细
+		</div>
+		<div class="detail">
+			<div class="leftdetail">
+				<div class="topname">
+					进群支付
+					<span class="addfal">(失败)</span>
+				</div>
+				<div class="time">
+					2018.3.18 12:12:12
+				</div>
+			</div>
+			<div class="rightdetail">
+				+5.00
+			</div>
+		</div> -->
+	</div>
+</body>
+
+</html>
+<script>
+	
+
+	seajs.use('../static/js/forApp/walletmoney');
+</script>

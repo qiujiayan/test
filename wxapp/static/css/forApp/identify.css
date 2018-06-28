@@ -1,0 +1,23 @@
+.maincontent{
+	width: 7.5rem;
+	padding-top: .2rem;
+}
+.maincontent .content{
+	width: 7.02rem;
+	margin: 0 auto;
+}
+.content-one{
+	margin-bottom: .4rem;
+}
+.maincontent .content h3{
+	font-size: .3rem;
+	color: #363636;
+	line-height: .6rem;
+}
+.maincontent .content p{
+	font-size: .3rem;
+	line-height: .42rem;
+	color: #979797;
+	margin-bottom: .2rem;
+}
+

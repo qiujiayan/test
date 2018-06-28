@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="超火">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="telephone=no" name="format-detection">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<title>支付</title>
+	<link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+	<script src="../vendor/sea.js"></script>
+	<script src="../vendor/config.js"></script>
+	<script src="../vendor/resourceLoad.js"></script>
+	<script src="../vendor/rem.js"></script>
+	<link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/forApp/cash.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/share/redPackagePay.css" rel="styleSheet" />
+	<link type="text/css" href="../static/css/forApp/zhifu-cash.css" rel="styleSheet" />
+
+</head>
+
+<body>
+	<div class="money">
+		<p class="left">支付金额：</p>
+		<p class="right">元</p>
+	</div>
+	<p class="payway">
+		支付方式
+	</p>
+	<div class="yuepay">
+		<img src="../static/images/share/yue.png" class="yuepng" />
+		<span>余额</span>
+		<img src="../static/images/share/check.png" class="yuepay-check" />
+	</div>
+	<div class="wxpay">
+		<img src="../static/images/share/wx.png" class="wxpng" />
+		<span>微信</span>
+		<img src="../static/images/share/nocheck.png" class="wxpay-check" />
+	</div>
+	<div class="zfbpay">
+		<img src="../static/images/share/zfb.png" class="zfbpng" />
+		<span>支付宝</span>
+		<img src="../static/images/share/nocheck.png" class="zfbpay-check" />
+	</div>
+	<div class="atoncePay">
+		立即支付
+	</div>
+	<!--输入支付密码密码-->
+	<div class="passwordBg" style="z-index:999;">
+		<div class="passwordWrap">
+			<div class="top">
+				请输入支付密码
+				<span>X</span>
+			</div>
+			<div class="bottom">
+				<p class="title">超火红包</p>
+				<p class="money" id="look_money"></p>
+				<ul class="mm_box">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="numb_box">
+			<div class="xiaq_tb">
+				<img src="../static/images/share/jftc_14.jpg" height="10">
+			</div>
+			<ul class="nub_ggg">
+				<li>
+					<a href="javascript:void(0);" class="zf_num">1</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">2</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">3</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">4</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">5</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">6</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">7</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">8</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_num">9</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_empty">清空</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zj_x zf_num">0</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="zf_del">删除</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 是否去设置支付密码的弹窗 -->
+	<div class="prompt">
+		<div class="pop_bg"></div>
+		<div class="pop_con">
+			<div class="prompt_text">
+				<span class="prompt_text_w">为了您的账号安全,
+					<br/>请先设置支付密码</span>
+			</div>
+			<div class="prompr_determine">
+				<span class="none_but">取消</span>
+				<span class="ok_but">确定</span>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
+<script>
+	seajs.use('../static/js/share/redPackagePay');
+</script>

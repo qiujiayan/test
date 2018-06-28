@@ -1,0 +1,66 @@
+html,body{
+	background: #efeff4;
+}
+.joinway{
+	font-size: .24rem;
+	color: #FF1400;
+	text-indent: .24rem;
+	line-height: .74rem;
+}
+.logo{
+	width: 7.5rem;
+	padding-top: .6rem;
+	margin-bottom: .4rem;
+}
+.logo img{
+	width: .8rem;
+	height: .8rem;
+	margin: 0 auto;
+}
+.pass{
+	width: 6.22rem;
+	height: 1.2rem;
+	margin: 0 auto;
+	margin-bottom: .3rem;
+}
+.pass div{
+	width: 100%;
+	height: 1.2rem;
+	border-bottom: 2px solid #363636;
+} 
+.pass input{
+	width: 100%;
+	height: 1.2rem;
+	font-size: .64rem;
+	color: #363636;
+	text-align: center;
+	background: #efeff4;
+}
+/*.pass div{
+	width: 1.2rem;
+	height: 1.2rem;
+	float: left;
+	border-bottom: 2px solid #363636;
+}
+.pass div input{
+	width: 100%;
+	height: 1.2rem;
+	font-size: .64rem;
+	color: #363636;
+	text-align: center;
+	background: #efeff4;
+}
+.pass .password-one,.pass .password-two,.pass .password-three{
+	margin-right: .47rem;
+}*/
+.confirmPay{
+	width: 6.38rem;
+	height: .88rem;
+	border-radius: .08rem;
+	background: #FF1400;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	line-height: .88rem;
+	margin: 0 auto;
+}

@@ -1,0 +1,318 @@
+body,html{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	overflow-x: hidden;
+}
+header{
+	display: none;
+	width: 96.8%;
+	padding: 0 1.6%;
+	height: .88rem;
+	line-height: .88rem;
+	background: #fff;
+	color: #000;
+	font-size: .35rem;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index: 9999;
+	border-bottom: 1px solid #efeff4;
+}
+header .iconfont{
+	font-size: .4rem;
+	margin-top: .02rem;
+}
+.question .iconfont{
+	font-size: .36rem;
+}
+header .headleft{
+	float: left;
+	font-size: .36rem;
+}
+header .headright{
+	margin-left: -.18rem;
+}
+header .headdelete{
+	display: block;
+/*	width: .5rem;
+	height: .1rem;
+	margin-top: .39rem;*/
+	width: 9%;
+	height: .44rem;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background-image:url(../../images/delete1.png);
+	background-size: cover;
+	display: none;
+	cursor: pointer;
+}
+
+
+.wrap{
+	width: 96.8%;
+	padding: 0 1.6%;
+	/* margin-top: .88rem; */
+}
+.wrap .left{
+	float: left;
+	width: .72rem;
+	border-radius: .06rem;
+	overflow: hidden;
+	margin-right: .2rem;
+}
+.wrap .left img{
+	width: .72rem;
+	height: .72rem;
+}
+.wrap .left{
+	float: left;
+	width: .72rem;
+	border-radius: .06rem;
+	overflow: hidden;
+	margin-right: .2rem;
+}
+.wrap .left img{
+	width: .72rem;
+	height: .72rem;
+}
+.wrap .right{
+	float: left;
+	width: 6.1rem;
+	padding-bottom: .2rem;
+	border-bottom: 1px solid #efefef;
+}
+.wrap .videoMessage .right{
+	padding-bottom: .08rem;
+}
+/*文本消息*/
+.textMessage{
+	width: 100%;
+	padding: .2rem 0 0 0;
+	overflow: hidden;
+}
+.textMessage .left{
+	float: left;
+	width: .72rem;
+	border-radius: .06rem;
+	overflow: hidden;
+	margin-right: .2rem;
+}
+.textMessage .left img{
+	width: .72rem;
+	height: .72rem;
+}
+.textMessage .right{
+	float: left;
+	width: 6.1rem;
+	padding-bottom: .2rem;
+	border-bottom: 1px solid #efefef;
+}
+.right .topDetail{
+	width: 100%;
+	height: .36rem;
+	line-height: .36rem;
+}
+.right .topDetail .personName{
+	float: left;
+	font-size: .24rem;
+	color: #979797;
+}
+.right .topDetail .time{
+	font-size: .24rem;
+	color: #979797;
+	float: right;
+}
+.textMessage .right p,.animateMessage .right p,.cardMessage .right p{
+	font-size: .3rem;
+	color: #363636;
+	width: 100%;
+	height: auto;
+	line-height: .42rem;
+}
+
+.imgMessage,.animateMessage,.cardMessage,.mapMessage,.radioMessage,.videoMessage,.fileMessage,.historyMessage,.graphicMessage{
+	width: 100%;
+	padding: .2rem 0 0 0;
+	overflow: hidden;
+}
+.mapContent,.radioContent,.fileContent,.videoContent{
+	width: 5.58rem;
+	height:.5rem ;
+	padding: .2rem;
+	border: 1px solid #efefef;
+	cursor: pointer;
+}
+/*.videoContent{
+	padding: .25rem .2rem;
+}*/
+.imgContent,.messageback,.historyContent,.graphicContent{
+	cursor: pointer;
+}
+.historyContent{
+	width: 5.58rem;
+	/*height:1.06rem ;*/
+	height:1.16 rem ;
+	padding: .2rem;
+	border: 1px solid #efefef;
+}
+.fileContent .fileRight{
+	width: 4.3rem;
+}
+.graphicContent{
+	width: 5.58rem;
+	height:1.32rem;
+	padding: .2rem;
+	border: 1px solid #efefef;
+	overflow: hidden;
+}
+.graphicContent .graphicTitle{
+	font-size: .3rem;
+	color: #363636;
+	margin-top: -.1rem;
+	/*margin-bottom: .1rem;*/
+}
+.historyContent .historyTitle{
+	font-size: .3rem;
+	color: #363636;
+	margin-top: -.1rem;
+}
+.historyContent .history{
+	font-size: .2rem;
+	color: #979797;
+}
+.mapContent .mapLeft,
+.mapContent .mapRight,
+.radioContent .radioLeft,
+.radioContent .radioRight,
+.videoContent .videoLeft,
+.videoContent .videoRight,
+.fileContent .fileLeft,
+.fileContent .fileRight,
+.graphicContent .graphicLeft,
+.graphicContent .graphicRight
+{
+	float: left;
+}
+.graphicContent .graphicLeft{
+	width: 1rem;
+	height: 1rem;
+	margin-right: .2rem;
+}
+.graphicContent .graphicLeft img{
+	width: 1rem;
+	height: 1rem;
+}
+.graphicContent .graphicRight{
+	float: left;
+	width: 4.36rem;
+	height: 1rem;
+	overflow: hidden;
+}
+.graphicContent .graphicRight p{
+	font-size: .2rem;
+	color: #979797;
+	text-overflow: ellipsis;
+}
+.mapContent .mapLeft,
+.radioContent .radioLeft,
+.videoContent .videoLeft,
+{
+	margin-right: .2rem;
+}
+.fileContent .fileLeft
+{
+	margin-right: .2rem;
+}
+.mapContent .mapLeft img,
+.radioContent .radioLeft img,.videoContent .videoLeft img
+{
+	width: .39rem;
+	height: .48rem;
+	margin-left: .15rem;
+	margin-right: .15rem;
+}
+.videoContent .videoLeft{
+	padding: .1rem 0;
+	margin-top: -.1rem;
+	background: #979779;
+}
+.fileContent .fileLeft img
+{
+	width: .68rem;
+	height: .68rem;
+	margin-top: -.1rem;
+}
+.mapContent .mapRight,
+.fileContent .fileRight
+{
+	margin-top: -.1rem;
+}
+.mapContent .mapRight .p1
+{
+	font-size: .24rem;
+	color: #363636;
+	margin-bottom: .05rem;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.fileContent .fileRight .p1
+{
+	font-size: .24rem;
+	color: #363636;
+	margin-bottom: .05rem;
+	width: 4.3rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.mapContent .mapRight .p2,
+.fileContent .fileRight .p2
+{
+	font-size: .2rem;
+	color: #979797;
+}
+.radioContent .radioRight,
+.videoContent .videoRight
+{
+	line-height: .9rem;
+	font-size: .2rem;
+	color: #979797;
+	margin-top: -.2rem;
+}
+
+video{
+	width: 100%;
+	height: 100%;
+}
+/*.videoContent{
+	position: relative;
+	cursor: pointer;
+}
+.videoMessage .videoContent img{
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	z-index: 999;
+	left: 50%;
+	top: 50%;
+	margin-left: -.5rem;
+	margin-top: -.5rem;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+
+body,html{
+	/* background-color: #efeff4; */
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-image: url(/wxapp/static/images/marketing/market_bg.png);
+	background-size: cover
+}
+
+header{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #fff;
+	color: #000;
+	/* font-size: 18px; */
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+header .iconfont{
+	font-size: .4rem;
+	margin-top: .02rem;
+}
+header .headleft{
+	float: left;
+	font-size: 20px;
+}
+header .head_link{
+	float: right;
+	font-size: 18px;	
+}
+.market_btn{
+	position: fixed;
+	width:100%;
+	left:0;
+	text-align: center;
+	bottom: 0;
+}
+.market_btn .btn_a{
+	font-size:18px;border-radius: 3px;
+	display: inline-block;line-height: 38px;
+	width: 33%;margin: 0 4%;
+	height:38px;
+	background-color: #fff;
+}
+.market_btn_bottom{margin-top: 125px;margin-bottom: 25px;}
+.market_btn_bottom a{font-size: 16px;color: #fff;}
+.market_btn_bottom em{font-size: 16px;color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+

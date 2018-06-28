@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="超火">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>账号绑定</title>
+    <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+    <script src="../vendor/sea.js"></script>
+    <script src="../vendor/config.js"></script>
+    <script src="../vendor/resourceLoad.js"></script>
+    <script src="../vendor/rem.js"></script>
+    <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/addzfb.css" rel="styleSheet" />
+
+</head>
+<body>
+	<header>
+		<span style="float: left;font-size: .36rem;" onclick="history.back();"><span class="iconfont">&#xe60b;</span></span>
+		<span style="margin-left: -.18rem;" class="bdzfb">绑定</span>
+	</header>
+	<div class="topdetail">
+		请绑定本人实名认证的支付宝账号，避免提现失败造成损失！
+	</div>
+	<div class="mainwrap">
+		<div class="wrap wrap1">
+			<p class="left">账号</p>
+			<div class="inputcontent">
+				<input type="text" placeholder="请输入支付宝账号" class="zfbinput"/>
+			</div>
+		</div>
+		<div class="wrap wrap2">
+			<p class="left">姓名</p>
+			<div class="inputcontent">
+				<input type="text" placeholder="请输入姓名" class="nameinput"/>
+			</div>
+		</div>
+		<div class="wrap wrap3">
+			<p class="left">手机号</p>
+			<div class="inputcontent">
+				<input type="text" placeholder="请输入手机号" class="phoneinput"/>
+			</div>
+		</div>
+	</div>
+	<div class="bdbtn">绑定</div>
+
+</body>
+</html>
+<script>
+    seajs.use('../static/js/forApp/addzfb');
+</script>

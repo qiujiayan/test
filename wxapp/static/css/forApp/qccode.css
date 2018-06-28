@@ -1,0 +1,75 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.content{
+	width: 6.2rem;
+	height: 8.6rem;
+	box-shadow: 0px 0px 8px rgba(0,0,0,.1);
+	margin: 0 auto;
+	margin-top: .8rem;
+	border-radius: .08rem;
+	overflow: hidden;
+}
+.wrap{
+	width: 5rem;
+	height: 6.6rem;
+	margin: 0 auto;
+	margin-top: .8rem;
+}
+.wrap .card-top{
+	width: 100%;
+	height: 1.2rem;
+	margin-bottom: .3rem;
+}
+.wrap .card-top img{
+	width: 1.2rem;
+	height: 1.2rem;
+	display: block;
+	float: left;
+	border-radius: 5px;
+}
+.wrap .card-top .title{
+	padding-left: .2rem;
+	width: 3.6rem;
+	height: 1.2rem;
+	float: left;
+}
+.wrap .card-top .title .p1{
+	font-size: .3rem;
+	color: #363636;
+	margin-bottom: .16rem;
+}
+.wrap .card-top .title .p2{
+	font-size: .24rem;
+	color: #979797;
+}
+.wrap .qrcode-img{
+	width: 5rem;
+	height: 5rem;
+	margin-bottom: .3rem;
+}
+.wrap .qrcode-img img{
+	width: 100%;
+	height: 100%;
+}
+.wrap .qrcode-img canvas{
+	width: 5rem;
+	height: 5rem;
+}
+.wrap .bottom-text{
+	font-size: .24rem;
+	color: #979797;
+	text-align: center;
+}
+/*.wrap .bottom-text2{
+	font-size: .24rem;
+	color: #979797;
+}
+.wrap .card-top .title .quntitle{
+	margin-bottom: .1rem;
+}
+.wrap .card-top .title .quntitle2{
+	margin-bottom: .1rem;
+}*/

@@ -1,0 +1,272 @@
+body,html{
+
+	width: 100%;
+	min-height: 100%;
+}
+
+
+/* 苹果手机网站取消点击后的阴影 */
+*{ -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent; /* For some Androids */ }  
+
+/* css手机网站取消长按复制 */
+*{   
+	-webkit-touch-callout:none;  /*系统默认菜单被禁用*/   
+	-webkit-user-select:none; /*webkit浏览器*/   
+	-khtml-user-select:none; /*早期浏览器*/   
+	-moz-user-select:none;/*火狐*/   
+	-ms-user-select:none; /*IE10*/   
+	user-select:none;   
+}  
+/* header{
+	background: url(../../images/share/wallet-bg.png) no-repeat center;
+	width: 100%;
+	height: 4.4rem;	
+	line-height: .88rem;
+	color: white;
+	font-size: .35rem;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+} */
+.wrap{	
+	background: url(../../images/share/wallet-bg.png) no-repeat center;
+	background-size:cover;
+	width: 100%;
+	height: 4.4rem;	
+	line-height: .88rem;
+	color: white;
+	font-size: .36rem;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.wrap .put-forward{
+	font-size: .3rem;
+	color: white;
+	float:right;
+	/* margin-right: .1rem; */
+	margin-top:.3rem;
+}
+.wrap .put-forward img{
+	width:70%;
+	height:70%;
+}
+
+.total_amount{
+	z-index: 999;
+	/* background: url(../../images/share/bg.png) no-repeat center; */
+	background-color: #fff;
+	border-radius:.2rem;
+	width:80%;
+	height:4.04rem;
+	position: relative;
+	transform: translateY(-56%);
+	margin-left: 10%;
+	text-align: center;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+/* .wrap .question{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .42rem;
+	line-height: .42rem;
+	margin-bottom: .16rem;
+} */
+header a{
+	display: block;
+	float: right;
+	width: 1.42rem;
+	height: .42rem;
+	/* margin-top: .23rem; */
+	text-align: center;
+	border-radius: .21rem;
+	font-size: .3rem;
+    color: #fff;
+}
+.total_amount .total{
+	font-size: .48rem;
+	width: 100%;
+	/* height: .42rem;
+	line-height: .42rem;
+	text-align: center;
+	margin-bottom: .42rem; */
+	
+}
+.total_amount .total h4{
+	font-weight: normal;
+	padding-top: .3rem;
+}
+.total_amount .totalmoney{
+	font:1rem/1.6rem "";	
+	width: 100%;
+	height: .9rem;
+	text-align: center;
+}
+.total_amount .totalmoney b{
+	font-weight: normal;
+	font-size: .48rem;
+}
+.total_amount .drawcash{
+	display: none;
+	background:  url(../../images/share/pf-button.png) no-repeat center;	
+	height: .8rem;
+	border-radius: .06rem;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 80%;
+	left: 10.7%;
+	bottom: 17.2%;
+}
+.total_amount .drawcash2{
+	display: none;
+	background-color: #DBDBDB;
+	color: #fff;	
+	height: .8rem;
+	line-height: 0.8rem;
+	font-size: .32rem;
+	border-radius: .06rem;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 80%;
+	left: 10.7%;
+	bottom: 17.2%;
+}
+.total_amount .error_mass{
+	display: none;
+	font-size: .26rem;
+	color:#ff1400;
+	position: absolute;
+	left:22.7%;
+	bottom:3.7%;
+}
+.detailwrap{
+	width: 100%;
+	margin-top: -2rem;
+	/* margin-top: 2.3rem; */
+}
+.detailwrap .detailheader{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .8rem;
+	line-height: .8rem;
+	margin-bottom: .01rem;
+	font-size: .32rem;
+	background: white;
+}
+.detailwrap .detail{
+	width: 7.02rem;
+	padding: .07rem .24rem;
+	height: 1rem;
+	line-height: 1rem;
+	border-top: 1px solid #efeff4;
+	/* border-bottom: 1px solid #efeff4; */
+	background: white;
+	cursor: pointer;
+
+}
+.detailwrap .detail .leftdetail{
+	float: left;
+}
+.detailwrap .detail .leftdetail .topname{
+	height: .45rem;
+	line-height: .45rem;
+	margin-top: .08rem;
+	font-size: .32rem;
+
+}
+.detail .leftdetail .topname .addfal{
+	color: #FD3422;
+	/* display: none; */
+}
+.detailwrap .detail .leftdetail .time{
+	height: .4rem;
+	line-height: .4rem;
+	font-size: .28rem;
+	color: #979797;
+	margin-top: .08rem
+}
+.detailwrap .detail .rightdetail{
+	float: right;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: .36rem;
+}
+.detailwrap .detail .rightred3{
+	color: #FD3422;
+}
+
+.cashwrap{
+	width: 100%;
+	background: white;
+	margin-bottom: .2rem;
+/*	text-align: center;*/
+}
+.cashwrap .cashname{
+	height: .96rem;
+	line-height: .96rem;
+	text-align: center;
+	font-size: .3rem;
+	margin-bottom: .11rem;
+}
+.cashwrap .cashdetail{
+	width: 5.8rem;
+	margin-left: .85rem;
+	height: .93rem;
+	border-bottom: 1px solid #efeff4;
+}
+.cashwrap .cashdetail .money{
+	width: 100%;
+	height: .67rem;
+	font-size: .48rem;
+}
+.cashwrap .cashdetail .money input{
+	width: 88%;
+	height: .67rem;
+	line-height: .67rem;
+	font-size: .48rem;
+}
+.cashwrap .infactmoney{
+	width: 5.8rem;
+	margin-left: .85rem;
+	padding-top: .18rem;
+	height: .57rem;
+	font-size: .24rem;
+	color: #979797;
+}
+.cashwrap .infactmoney span{
+	color: #FD3422;
+}
+.account,.account2{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .9rem;
+	line-height: .9rem;
+	margin-bottom: .02rem;
+	background: white;
+}
+.account span,.account2 span{
+	font-size: .3rem;
+}
+.cashbtnwrap{
+	width: 100%;
+}
+.cashbtnwrap .cashbtn{
+	width: 6.4rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #FD3422;
+	color: white;
+	border-radius: .06rem;
+	text-align: center;
+	font-size: .3rem;
+	margin-left: .55rem;
+	margin-top: .41rem;
+}
+header .iconfont{
+	font-size: .36rem;
+	margin-top: .02rem;
+}

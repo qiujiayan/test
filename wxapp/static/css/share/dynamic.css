@@ -1,0 +1,121 @@
+.top-img{
+	width: 100%;
+	/*display: none;*/
+}
+.top-img img{
+	width: 100%;
+	height: auto;
+}
+.main{
+	width: 100%;
+}
+.main .main-content{
+	width: 7.02rem;
+	margin: 0 auto;
+}
+.main .main-content p{
+	padding-top: .08rem;
+	font-size: .24rem;
+	color: #979797;
+	line-height: .36rem;
+	margin-bottom: .08rem;
+}
+.icon-two{
+	width: 100%;
+	height: .44rem;
+	line-height: .44rem;
+	vertical-align: middle;
+	margin-bottom: .1rem;
+}
+.icon-two img{
+	display: inline-block;
+	width: .44rem;
+	height: .44rem;
+	margin-right: .05rem;
+	vertical-align: middle;
+	
+}
+.icon-two span{
+	font-size: .2rem;
+	color: #979797;
+	display: inline-block;
+	width: .44rem;
+	height: .44rem;
+	vertical-align: middle;
+	line-height: .44rem;
+}
+.zan-check{
+	width: 100%;
+	height: .44rem;
+	line-height: .44rem;
+	vertical-align: middle;
+	margin-bottom: .1rem;
+	display: none;
+}
+.zan-check img{
+	display: inline-block;
+	/*float: left;*/
+	width: .44rem;
+	height: .44rem;
+	margin-right: .12rem;
+	vertical-align: middle;
+	border-radius: .08rem;
+}
+.zan-check span{
+	font-size: .24rem;
+	color: #363636;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: .44rem;
+	/*cursor: pointer;*/
+}
+.discuss{
+	width: 100%;
+}
+.main .discuss p{
+	width: 100%;
+	line-height:.36rem ;
+	font-size: .24rem;
+}
+.discuss p .myself,.discuss p .other{
+	color: #979797;
+}
+.discuss p .reapply,.discuss p .detail{
+	color: #363636;
+}
+.discuss p .myself,.discuss p .reapply{
+	margin-right: .08rem;
+}
+.discuss .more{
+	font-size: .24rem;
+	color: #979797;
+	text-align: center;
+	padding-top: .1rem;
+	/*cursor: pointer;*/
+	margin-bottom: .1rem;
+}
+.load{
+	width: 100%;
+	height: .8rem;
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.load .loadapp{
+	font-size: .26rem;
+	color: #ff1400;
+	padding: .05rem;
+	border: 1px solid #ff1400;
+	border-radius: .08rem;
+	float: left;
+	margin-top: .16rem;
+	margin-left: 45%;
+}
+.load .cancel{
+	font-size: .3rem;
+	float: right;
+	padding: .1rem;
+	cursor: pointer;
+	margin-top: .12rem;
+}

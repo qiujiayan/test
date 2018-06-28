@@ -1,0 +1,77 @@
+body,html{
+	background-color: #efeff4;
+	width: 100%;
+	min-height: 100%;
+}
+header{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #262626;
+	color: white;
+	font-size: .35rem;
+	text-align: center;
+	overflow: hidden;
+}
+.topdetail{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	line-height: .8rem;
+	font-size: .24rem;
+}
+.mainwrap{
+	width: 7.26rem;
+	padding-left: .24rem;
+	background: white;
+}
+.mainwrap .wrap{
+	width: 7.26rem;
+	height: .9rem;
+	line-height: .9rem;
+	font-size:.3rem;
+	border-bottom: 1px solid #efeff4;
+}
+.mainwrap .wrap .left,.mainwrap .wrap .inputcontent{
+	float: left;
+}
+.mainwrap .wrap .left{
+	width: 1rem;
+}
+.mainwrap .wrap .inputcontent{
+	width:6.01rem ;
+}
+.mainwrap .wrap .inputcontent input{
+	width: 100%;
+	text-align: right;
+	color: black;
+	font-size:.3rem;
+}
+.bdbtn{
+	width: 6.4rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #d8d8d8;
+	color: white;
+	font-size: .3rem;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: .32rem;
+	border-radius: .06rem;
+}
+.modifybtn{
+	width: 6.4rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #FD3422;
+	color: white;
+	font-size: .3rem;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: .32rem;
+	border-radius: .06rem;
+}
+header .iconfont{
+	font-size: .36rem;
+	margin-top: .02rem;
+}

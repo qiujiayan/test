@@ -1,0 +1,26 @@
+.downloadApp{
+	width: 6.38rem;
+	height: .88rem;
+	border-radius: .08rem;
+	background: #FF1400;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	line-height: .88rem;
+	margin: 0 auto;
+}
+.wrap{
+	width: 7.5rem;
+	padding: 1rem 0 1.9rem 0;
+}
+.wrap img{
+	width: 2.4rem;
+	height: 2.4rem;
+	margin: 0 auto;
+	margin-bottom: .3rem;
+}
+.wrap p{
+	font-size: .24rem;
+	color: #363636;
+	text-align: center;
+}

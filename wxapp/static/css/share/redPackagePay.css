@@ -1,0 +1,107 @@
+html,body{
+	background: #efeff4;
+}
+.joinway{
+	font-size: .24rem;
+	color: #FF1400;
+	text-indent: .24rem;
+	line-height: .74rem;
+}
+.money{
+	width: 7.02rem;
+	height: .9rem;
+	line-height: .9rem;
+	background: white;
+	padding: 0 .24rem;
+}
+.money .left{
+	float: left;
+	font-size: .3rem;
+	color: #363636;
+	line-height: .9rem;
+}
+.money .right{
+	float: right;
+	font-size: .3rem;
+	color: #363636;
+	line-height: .9rem;
+}
+.payway{
+	width: 7.02rem;
+	height: .8rem;
+	line-height: .8rem;
+	padding: 0 .24rem;
+	font-size: .3rem;
+	color: #363636;
+}
+/* .yuepay{
+	display:none;
+} */
+.yuepay,.wxpay,.zfbpay{
+	width: 7.02rem;
+	height: .9rem;
+	background: white;
+	padding: 0 .24rem;
+	overflow: hidden;
+	position: relative;
+}
+.zfbpay{
+	margin-bottom:.44rem;		
+}
+.yuepay,.wxpay{
+	margin-bottom: 1px;	
+}
+.yuepay .yuepng,.wxpay .wxpng,.zfbpay .zfbpng{
+	display: inline-block;
+	width: .48rem;
+	height: .48rem;
+	margin-top: .21rem;
+}
+.yuepay span,.wxpay span,.zfbpay span{
+	display: inline-block;
+	font-size: .3rem;
+	color: #363636;
+	margin-top: .21rem;
+	position: absolute;
+	left: .82rem;
+	top: .02rem;
+}
+
+.yuepay .yuepay-check,
+.wxpay .wxpay-check,.wxpay .wxpay-nocheck,.zfbpay .zfbpay-check,.zfbpay .zfbpay-nocheck{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	float: right;
+	margin-top: .3rem;
+	cursor: pointer;
+}
+.atoncePay{
+	width: 7.02rem;
+	height: .88rem;
+	border-radius: .08rem;
+	background: #FF1400;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	line-height: .88rem;
+	margin: 0 auto;
+}
+.passwordBg .passwordWrap .bottom .money{width: auto;}
+
+
+
+.prompt{position: fixed;width: 100%;height: 100%;left: 0;top:0;display: none;}
+.prompt .pop_bg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.3);}
+.prompt .pop_con{position: absolute;width: 65%;left: 15%;background-color: #fff;border-radius: 5px;top:50%;
+	transform: translateY(-50%);
+}
+.pop_con .prompt_text{padding: 15px 10px;text-align: center;}
+.pop_con .prompt_text .prompt_text_w{display:block;text-align:center;font-size: 16px;line-height: 1.8;}
+.pop_con .prompr_determine{border-top:.01rem solid #979797;font-size: 0;
+
+}
+.pop_con .prompr_determine span{display: inline-block;width: 50%;height: 50px;text-align: center;line-height: 50px;font-size: 16px;
+	box-sizing: border-box;border-right: 1px solid #979797;
+}
+.pop_con .prompr_determine span:last-child{border-right: none;}

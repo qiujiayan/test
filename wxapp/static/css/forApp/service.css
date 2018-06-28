@@ -1,0 +1,50 @@
+header{
+	width: 100%;
+	background: #363636;
+	height: .88rem;
+	line-height: .88rem;
+	color: white;
+	position: relative;
+	margin-bottom: .2rem;
+}
+header .back{
+	/*display: block;
+	height: .88rem;
+	line-height: .88rem;*/
+	text-align: center;
+	font-size: .52rem;
+	color: white;
+/*	float: left;*/
+	margin-left: .12rem;
+}
+header p{
+	/*float: left;*/
+	font-size: .34rem;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -0.64rem;
+}
+.maincontent{
+	width: 7.5rem;
+	padding-top: .2rem;
+}
+.maincontent .content{
+	width: 7.02rem;
+	margin: 0 auto;
+}
+.maincontent .content h3{
+	font-size: .32rem;
+	color: #363636;
+	line-height: .6rem;
+	text-align: left;
+	margin-bottom: .2rem;
+}
+.maincontent .content p{
+	font-size: .28rem;
+	line-height: .4rem;
+	color: #3c3c3d;
+}
+.maincontent .content .title{
+	color: #363636;
+}

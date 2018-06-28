@@ -1,0 +1,46 @@
+
+body,html{
+	/* background-color: #efeff4; */
+	width: 100%;
+}
+
+header{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #FF1400;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+header .iconfont{
+	font-size: .4rem;
+	margin-top: .02rem;
+}
+header .headleft{
+	float: left;
+	font-size: 20px;
+}
+.title{margin-top: .86rem;text-align: center;padding: 40px 0;background: #FF1400;color: #fff;}
+.title span{margin-top:12px;display: inline-block;}
+/* .mingxi{} */
+.mingxi h5{background-color: #f3f3f3;line-height: 45px;padding: 0 15px;font-weight: normal;
+	color: #323232;font-size: 20px;
+}
+.mingxi ul{padding-left: 15px;}
+.mingxi li{line-height: 48px;border-bottom: 1px solid #ddd;padding-right: 15px;color: #323232;}
+.mingxi span{font-size: 18px;}
+.mingxi em{float: right;font-size: 18px;}
+
+
+
+
+
+
+
+

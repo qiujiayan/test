@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="超火">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>明细详情</title>
+    <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+    <script src="../vendor/sea.js"></script>
+    <script src="../vendor/config.js"></script>
+    <script src="../vendor/resourceLoad.js"></script>
+    <script src="../vendor/rem.js"></script>
+    <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/cash.css" rel="styleSheet" />
+
+</head>
+<body><!--进群入账-->
+	<header style="background: #fff;">
+		<span style="float: left;font-size: .36rem;" onclick="history.back();"><span class="iconfont">&#xe60b;</span></span>
+		<span style="margin-left: -.18rem;">明细详情</span>
+	</header>
+	<div class="cdname">
+		<span class="left">入账金额（元）</span>
+		<span class="right"></span>
+	</div>
+	<div class="cdwrap">
+		<div class="cddetail cd1">
+			<span class="left">账单类型</span>
+			<span class="right"></span>
+		</div>
+		<div class="cddetail cd2">
+			<span class="left">支付人</span>
+			<span class="right"></span>
+		</div>
+		<div class="cddetail cd3">
+			<span class="left">创建时间</span>
+			<span class="right"></span>
+		</div>
+		<div class="cddetail cd4">
+			<span class="left">交易单号</span>
+			<span class="right"></span>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+    seajs.use('../static/js/forApp/cashdetail');
+</script>

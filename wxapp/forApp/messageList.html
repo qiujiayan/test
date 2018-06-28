@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="超火">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>群聊记录</title>
+    <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
+    <script src="../vendor/sea.js"></script>
+    <script src="../vendor/config.js"></script>
+    <script src="../vendor/resourceLoad.js"></script>
+    <script src="../vendor/rem.js"></script>
+    <script src="../static/js/plugins/hivideo.js"></script>
+    <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/messageList.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/hivideo.css" rel="styleSheet" />
+
+</head>
+<body>
+	<header>
+		<span class="headleft messageback" onclick="history.back();"><span class="iconfont">&#xe60b;</span></span>
+		<span class="headright">群聊记录</span>
+		<span class="headdelete"></span>
+	</header>
+	<div class="wrap">
+		<!--文本消息-->
+		<!-- <div class="textMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<p>你好年华你好年华你好年华你好年华你好年华你好年你好年华你好年华华你好年华你好年华你好年华你好年华</p>
+			</div>
+		</div> -->
+		
+		<!--图片消息-->
+		<!--<div class="imgMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="imgContent">
+					<img src="../static/images/3.png" />
+				</div>
+			</div>
+		</div>-->
+		
+		<!--视频消息-->
+		<!--<div class="videoMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="videoContent">
+					<video src="http://www.html5videoplayer.net/videos/madagascar3.mp4" autoplay="false" ishivideo="true" isrotate="false" autoHide="true">
+					</video>
+				</div>
+			</div>
+		</div>-->
+		<!--<div class="videoMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="videoContent">
+					<video ishivideo="true" autoplay="false" isrotate="false" autoHide="true">
+			            <source src="http://www.html5videoplayer.net/videos/madagascar3.mp4" type="video/mp4">
+			        </video>
+					<video src="http://www.html5videoplayer.net/videos/madagascar3.mp4" autoplay="false" ishivideo="true" isrotate="false" autoHide="true">
+					</video>
+					<img src="../static/images/play.png" />
+				</div>
+			</div>
+		</div>-->
+		
+		<!--动画表情-->
+		<!--<div class="animateMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<p>[动画表情]</p>
+			</div>
+		</div>-->
+		
+		<!--个人名片-->
+		<!--<div class="cardMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<p>[个人名片]</p>
+			</div>
+		</div>-->
+		
+		<!--地图消息-->
+		<!--<div class="mapMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="mapContent">
+					<div class="mapLeft">
+						<img src="../static/images/map.png"/>
+					</div>
+					<div class="mapRight">
+						<p class="p1">[位置]</p>
+						<p class="p2">具体位置</p>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		
+		<!--语音消息-->
+		<!--<div class="radioMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="radioContent">
+					<div class="radioLeft">
+						<img src="../static/images/horn.png"/>
+					</div>
+					<div class="radioRight">
+						转发语音不能播放
+					</div>
+				</div>
+			</div>
+		</div>-->
+		
+		<!--文件消息-->
+		<!--<div class="fileMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="fileContent">
+					<div class="fileLeft">
+						<img src="../static/images/picture.png"/>
+					</div>
+					<div class="fileRight">
+						<p class="p1">文件名字</p>
+						<p class="p2">大小</p>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		
+		<!--历史记录-->
+		<!--<div class="historyMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="historyContent">
+					<p class="historyTitle">群聊的聊天记录</p>
+					<p class="history">呀哎呀呀呀</p>
+					<p class="history">呀哎呀呀呀</p>
+					<p class="history">呀哎呀呀呀</p>
+				</div>
+			</div>
+		</div>-->
+		
+		<!--收藏的图文消息-->
+<!--		<div class="graphicMessage">
+			<div class="left">
+				<img src="../static/images/3.png"/>
+			</div>
+			<div class="right">
+				<div class="topDetail">
+					<span class="personName">金禁金</span>
+					<span class="time">2012.12.12 12.12.12</span>
+				</div>
+				<div class="graphicContent">
+					<p class="graphicTitle">收藏记录</p>
+					<div class="graphicLeft">
+						<img src="../static/images/picture.png"/>
+					</div>
+					<div class="graphicRight">
+						<p>收藏文字文字文字文收藏文字文字文字文字收藏文字文字文字文字收藏文字文字文字文字收藏文字文字文字文字收藏文字文字文字文字收藏文字文字文字文字收藏文字文字文字文字字</p>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		
+		
+	</div>
+
+</body>
+</html>
+<script>
+    seajs.use('../static/js/forApp/messageList');
+</script>

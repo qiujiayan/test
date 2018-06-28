@@ -1,0 +1,191 @@
+.logo{
+	width: 7.5rem;
+	height: 3.7rem;
+	overflow: hidden;
+	background-image: url(../../images/share/applogo.png);
+	background-repeat: no-repeat;
+	background-size: 2.18rem 2.4rem;
+	background-position: center;
+}
+/*.logo img{
+	width: auto;
+	height: 2.4rem;
+	margin: auto;
+	margin-top: .4rem;
+}*/
+.content{
+	width: 7.5rem;
+}
+.content p{
+	font-size: .28rem;
+	padding-top:.1rem ;
+}
+.content .wrap{
+	width: 6.42rem;
+	margin: 0 auto;
+}
+.wrap .phone-div,.wrap .code-div,.wrap .password-div{
+	width: 6.42rem;
+	height: 1rem;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.wrap .phone-div,.wrap .code-div,.wrap .invitationCode-div{
+	width: 6.42rem;
+	height: 1rem;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.wrap .phone-div .icon,.wrap .code-div .icon,.wrap .password-div .icon{
+	width: .44rem;
+	height: .44rem;
+	background-image: url(../../images/share/personal.png);
+	background-repeat: no-repeat;
+	background-size: .44rem .44rem;
+	background-position: center;
+	float: left;
+	margin-top: .4rem;
+	margin-right: .25rem;
+}
+.wrap .invitationCode-div .icon{
+	width: .44rem;
+	height: .44rem;
+	background-image: url(../../images/share/code.png);
+	background-repeat: no-repeat;
+	background-size: .44rem .44rem;
+	background-position: center;
+	float: left;
+	margin-top: .4rem;
+	margin-right: .25rem;
+}
+.wrap .phone-div input{
+	width: 5.65rem;
+	height: .44rem;
+	margin-top: .4rem;
+	font-size: .3rem;
+	color: #363636;
+}
+.wrap .invitationCode-div input{
+	width: 5.65rem;
+	height: .44rem;
+	margin-top: .4rem;
+	font-size: .3rem;
+	color: #363636;
+}
+.wrap .code-div .icon{
+	background-image: url(../../images/share/code.png);
+}
+.wrap .password-div .icon{
+	background-image: url(../../images/share/lock2.png);
+}
+.wrap .code-div input{
+	width: 3.95rem;
+	height: .44rem;
+	margin-top: .4rem;
+	font-size: .3rem;
+	color: #363636;
+}
+.wrap .code-div .get-code{
+	width: 1.7rem;
+	height: .64rem;
+	background: #FF1400;
+	color:white ;
+	font-size: .25rem;
+	float: right;
+	border-radius: .06rem;
+	text-align: center;
+	line-height: .64rem;
+	margin-top: .37rem;
+}
+.wrap .password-div input{
+	width: 5.11rem;
+	height: .44rem;
+	margin-top: .4rem;
+	font-size: .3rem;
+	color: #363636;
+}
+.wrap .password-div .eyes{
+	width: .44rem;
+	height: .64rem;
+	background-image: url(../../images/share/close.png);
+	background-repeat: no-repeat;
+	background-size: .44rem .44rem;
+	background-position:  right top;
+	float: right;
+	margin-top: .4rem;
+	cursor: pointer;
+}
+.wrap .register,.wrap .login{
+	width: 6.42rem;
+	height: .88rem;
+	margin-top: .3rem;
+	background: #e0e0e0;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	border-radius: .06rem;
+	line-height: .88rem;
+	/*cursor: pointer;*/
+}
+.third-party-login p{
+	position: relative;
+}
+.third-party-login span{
+	display: block;
+	font:.28rem/1.5rem "";
+	color:#878787;
+	text-align: center;
+}
+.third-party-login em.em-left{
+	display: block;
+	width:1.5rem;
+	border-bottom:1px solid #878787;
+	position: absolute;
+	top:.8rem;
+	left:1.2rem;
+}
+.third-party-login em.em-right{
+	display: block;
+	width:1.5rem;
+	border-bottom:0.01rem solid #878787;
+	position: absolute;
+	top:.8rem;
+	right:1.2rem;
+}
+.third-party-login .third-party{
+	text-align: center;
+
+}
+.third-party-login .third-party img{
+	display: inline-block;
+	width:.8rem;
+	height:.8rem;
+	margin:0 .8rem;
+}
+
+
+
+     input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+
+　　color: #979797;
+
+　　}
+
+　　input:-moz-placeholder, textarea:-moz-placeholder {
+
+　　color: #979797;
+
+　　}
+
+　　input::-moz-placeholder, textarea::-moz-placeholder {
+
+　　color: #979797;
+
+　　}
+
+　　input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+
+　　color: #979797;
+
+　　}

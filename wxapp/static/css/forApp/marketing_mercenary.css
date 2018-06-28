@@ -1,0 +1,49 @@
+
+body,html{
+	background-color: #fff;
+	width: 100%;padding-bottom: .5rem;
+}
+
+header{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #fff;
+	color: #000;
+	/* font-size: 18px; */
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+header .iconfont{
+	font-size: .4rem;
+	margin-top: .02rem;
+}
+header .headleft{
+	float: left;
+	font-size: 20px;
+}
+header .head_link{
+	float: right;
+	font-size: 18px;	
+}
+.marketing_mercenary{margin-top: .88rem;}
+.marketing_mercenary .item{margin-top: .3rem;padding: 0 15px;}
+.marketing_mercenary .item h4{font-size: 19px;font-weight: normal;color: #363636;}
+.marketing_mercenary .item p{font-size: 17px;margin-top: 8px;background-color: #f3f3f3;padding: 7px 8px;
+	color: #888;
+}
+
+
+
+
+
+
+
+
+
+

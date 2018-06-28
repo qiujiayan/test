@@ -1,0 +1,79 @@
+html,body{
+	background: #efeff4;
+}
+.joinway{
+	font-size: .24rem;
+	color: #FF1400;
+	text-indent: .24rem;
+	line-height: .74rem;
+}
+.money{
+	width: 7.02rem;
+	height: .9rem;
+	line-height: .9rem;
+	background: white;
+	padding: 0 .24rem;
+}
+.money .left{
+	float: left;
+	font-size: .3rem;
+	color: #363636;
+	line-height: .9rem;
+}
+.money .right{
+	float: right;
+	font-size: .3rem;
+	color: #363636;
+	line-height: .9rem;
+}
+.payway{
+	width: 7.02rem;
+	height: .8rem;
+	line-height: .8rem;
+	padding: 0 .24rem;
+	font-size: .3rem;
+	color: #363636;
+}
+.wxpay{
+	width: 7.02rem;
+	height: .9rem;
+	background: white;
+	padding: 0 .24rem;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: .3rem;
+}
+.wxpay .wxpng{
+	display: inline-block;
+	width: .48rem;
+	height: .48rem;
+	margin-top: .21rem;
+}
+.wxpay span{
+	display: inline-block;
+	font-size: .3rem;
+	color: #363636;
+	margin-top: .21rem;
+	position: absolute;
+	left: .82rem;
+	top: .02rem;
+}
+.wxpay .wxpay-check,.wxpay .wxpay-nocheck{
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	float: right;
+	margin-top: .3rem;
+	cursor: pointer;
+}
+.atoncePay{
+	width: 6.38rem;
+	height: .88rem;
+	border-radius: .08rem;
+	background: #FF1400;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	line-height: .88rem;
+	margin: 0 auto;
+}
