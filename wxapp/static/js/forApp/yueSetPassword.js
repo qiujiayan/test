@@ -26,10 +26,22 @@ define(function (require) {
 	var $ = require("jquery");
     require.async(['qrCode','zeptoAlert','wx','appApi','common'], function (qrCode,zeptoAlert,wx,appApi,common) {
         $(function () {
+			appVersion="1.9.3"
+			yMoney="10"
 			var token = common.getQueryString("token");
 			var passwordFirst;
+			var yMoney = common.getQueryString("yMoney");
+			var appVersion =common.getQueryString("appVersion");
+			var targetId = common.getQueryString("targetId");
+			var targetType = common.getQueryString("targetType");
+			var orderType = common.getQueryString("orderType");
+			// 判断版本号
 			
-			
+			// if(appVersion=="1.9.3"){
+			// 	$('.yuepay').show();
+			// }else{
+			// 	$('.yuepay').hide();
+			// }
 			 //数字显示隐藏
 		$(".xiaq_tb").click(function(){
 			$(".numb_box").slideUp(300);
@@ -51,7 +63,7 @@ define(function (require) {
 						passwordFirst += $(this).attr("data");
 					});
 					// alert("支付成功"+data);
-					window.location.href="yueSetAgain.html?token="+token+"&passwordFirst="+passwordFirst;
+					window.location.href="yueSetAgain.html?token="+token+"&passwordFirst="+passwordFirst+"&yMoney="+yMoney+"&appVersion="+appVersion+"&targetId="+targetId+"&targetType="+targetType+"&orderType="+orderType;
 				},100);
 			};
 		});            

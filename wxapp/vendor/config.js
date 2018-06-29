@@ -1,19 +1,19 @@
 var doName, mainUrl, rescUrl,webDoName;
 //本地环境
-doName = "http://192.168.0.168:8082/app";//田接口本地地址
-webDoName = "http://192.168.0.168:8082/web";//田接口本地地址
-// doName = "http://192.168.0.118:8082/app";//程扬接口本地地址
-// webDoName = "http://192.168.0.118:8082/web";//程扬接口本地地址
-mainUrl = "http://192.168.0.113:8080/wxapp"//app
-rescUrl = "http://192.168.0.113:8080"//基础路经
+// doName = "http://192.168.0.168:8082/app";//田接口本地地址
+// webDoName = "http://192.168.0.168:8082/web";//田接口本地地址
+// // doName = "http://192.168.0.118:8082/app";//程扬接口本地地址
+// // webDoName = "http://192.168.0.118:8082/web";//程扬接口本地地址
+// mainUrl = "http://192.168.0.113:8080/wxapp"//app
+// rescUrl = "http://192.168.0.113:8080"//基础路经
 
 
 //生产环境
 
-// doName = "https://www.chaohuo.net:7090/app";//线上地址
-// webDoName = "https://www.chaohuo.net:7090/web";//田接口本地地址
-// mainUrl = "https://www.chaohuo.net/wxapp";
-// rescUrl = "https://www.chaohuo.net/";
+doName = "https://www.chaohuo.net:7090/app";//线上地址
+webDoName = "https://www.chaohuo.net:7090/web";//田接口本地地址
+mainUrl = "https://www.chaohuo.net/wxapp";
+rescUrl = "https://www.chaohuo.net/";
 
 //测试环境
 

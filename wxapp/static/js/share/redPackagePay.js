@@ -86,26 +86,24 @@ define(function (require) {
 			var targetType = common.getQueryString("targetType");
 			var orderType = common.getQueryString("orderType");
 			var yMoney = common.getQueryString("yMoney");
-			// var yMoney = 4;
+			// var yMoney = 0.01;
 
 			var dsc = common.getQueryString("dsc");
 			var show = common.getQueryString("show");
 			var redPacketCount = common.getQueryString("redPacketCount");
-			// var token = "995d2f78f0e5b56c8bca958ba562a5cb";//有支付密码17602133781
-			// var token = "552f98a1901caa2c99741c13fc1eca34"//13450416801
-			// var token ="8b7b07e41cf1db8a3cf0fe8975a56d4f"
+			// var token ="386655ff1cb47bd545978e59df8bce95"
 			var token = common.getQueryString("token");
-			// var show = common.getQueryString("show");
+
 			var appVersion =common.getQueryString("appVersion");
 			var payType = 3;
 
 			//var targetId=5018,targetType=1,orderType=1,yMoney=0.01,dsc,redPacketCount=1,tradetType,openid,token="8f7d664c59b96e137184bfa8987c816f";
-		
-			// if(appVersion=="1.9.3"){
-			// 	$('.yuepay').show();
-			// }else{
-			// 	$('.yuepay').hide();
-			// }
+			// var appVersion="1.9.3"
+			if(appVersion=="1.9.3"){
+				$('.yuepay').show();
+			}else{
+				$('.yuepay').hide();
+			}
 
 
 			$('.money .right').html(yMoney + "元");
@@ -161,6 +159,10 @@ define(function (require) {
 						break;
 					case 2://微信
 						tradetType = "MWEB";
+						// targetId = 50;
+						// targetType = 2;
+						// orderType = 2;
+						// redPacketCount = 3;
 						appApi.wxAddRedPacketOrder(targetId, targetType, orderType, yMoney, dsc, redPacketCount, tradetType, openid, token, show,function (reqs) {
 							//console.log(reqs);
 							if (reqs.code == 1) {
@@ -185,23 +187,21 @@ define(function (require) {
 						// alert(3);
 						//要判断有没有设置支付密码，没有就弹窗 让设置 有就 $(".passwordBg").show();
 						tradetType = "MWEB";
-						var token = common.getQueryString("token");
-						// var token = "995d2f78f0e5b56c8bca958ba562a5cb";//有支付密码17602133781
-						// var token = "a6cfb843361928123e4d4a4c8b7e0405"//有支付密码
-						// var token = "b979be00e6eda73f4abd8a990e568b8f"//没有支付密码
-						// var token = "8b7b07e41cf1db8a3cf0fe8975a56d4f"//13450416801
+						// var token = common.getQueryString("token");
+						// var token = "82104fcd6896d6d147eeeac9f12be2e4"//13450416801
 						appApi.checkSetPayPassword(token, show,function (reqs) {
 							console.log(reqs);
 							if (reqs.content == 1) {
 								// alert("有密码！");
 								$(".passwordBg").show();//有密码
-								// $(".prompt").show();
+					
 							}
 							else if (reqs.content == 0) {
 								// alert("wu密码！");
 								$(".prompt").show();//没有密码
-								// $(".passwordBg").show();
+						
 							}
+							
 							else if (reqs.code == 3) {
 								$.dialog({
 									content: "登录过期",
@@ -221,8 +221,12 @@ define(function (require) {
 							$(".prompt").hide();
 
 							// 跳到设置密码页面
-							window.location.href = "../forApp/yueSetPassword.html?token=" + token;
+							window.location.href = "../forApp/yueSetPassword.html?token=" + token+"&yMoney="+yMoney+"&appVersion="+appVersion+"&targetId="+targetId+"&targetType="+targetType+"&orderType="+orderType;
+							setTimeout(function(){
+								window.location.reload();
+								},1000)
 						});
+						
 
 						break;
 					default:
@@ -251,17 +255,18 @@ define(function (require) {
 						});
 						// alert(payPassWord);
 						// 余额 支付接口 在此调用
-						// targetId = 5966;
+						// targetId = 553;
 						// targetType = 1;
 						// orderType = 1;
+						// redPacketCount = 1;
+			
 
 						appApi.walletAddRedPacketOrder(targetId, targetType, orderType, yMoney, dsc, redPacketCount, tradetType, token, payPassWord, show, function (reqs) {
+							
 							console.log(reqs);
 							if (reqs.code == 1) {
 								orderNo = reqs.content;
-
-
-								alert("支付成功");
+								// alert("支付成功");
 								// alert(oderNo);
 								window.location.href = "protocol://redYue?" + orderNo;
 								iTimer = setTimeout(function () {
@@ -273,9 +278,15 @@ define(function (require) {
 									title: "alert",
 									time: "2000"
 								});
+								setTimeout(function(){
+								window.location.reload();
+								},2000)
+								// $(".passwordBg").hide();
+					
 								$(".mm_box li").removeClass("mmdd");
 								$(".mm_box li").attr("data", "");
 								i = 0;
+								 
 							} else {
 								$.dialog({
 									content: reqs.msg,

@@ -263,7 +263,7 @@ define(function (require, exports, module) {
 		});
 	}
 	//查看二维码详情
-	function getQcCodeDetail(targetId,targetType,show,callback){
+	function getQcCodeDetail(targetId,targetType,shareUserId,show,callback){
 		$.ajax({
 			type: "GET",
 			url: doName + "/shareQrCode/getQcCodeDetail?show="+show,
@@ -271,7 +271,8 @@ define(function (require, exports, module) {
 			contentType: "application/json",
 			data: {
 				targetId:targetId,
-				targetType:targetType
+				targetType:targetType,
+				shareUserId
 			},
 			async:false,
 			crossDomain: true,
@@ -911,6 +912,15 @@ define(function (require, exports, module) {
                 })
 			}
 		});
+	}
+
+	// 营销模块--查看我的收益
+
+	function getAppCommission(loginUserId,token,communityId,pageNum,pageSize,show,callback){
+		$.ajax({
+			type:"GET",
+			url:doName + ""
+		})
 	}
 
 

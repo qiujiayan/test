@@ -18,7 +18,7 @@ define(function (require) {
 
 			// var isShareLink = common.getQueryString("isShareLink");
 
-			appApi.getQcCodeDetail(targetId,targetType,show,function(reqs){
+			appApi.getQcCodeDetail(targetId,targetType,shareUserId,show,function(reqs){
 				//console.log(reqs);
 				if(reqs.code==1){
 					fximg = reqs.content.targetAvatar;

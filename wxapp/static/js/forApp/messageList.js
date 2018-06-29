@@ -3,6 +3,14 @@ define(function (require) {
     require.async(['zeptoAlert','wx','appApi','common'], function (zeptoAlert,wx,appApi,common) {
         $(function () {
 			// 判断安卓或ios
+			var id = common.getQueryString("id");
+			var token = common.getQueryString("token");
+			var userCollectionId = common.getQueryString("userCollectionId");
+			var oString = '',oContent,imgfileurl;
+			var show = common.getQueryString("show");
+
+
+
 			var u = navigator.userAgent;
 			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
@@ -18,11 +26,7 @@ define(function (require) {
 				window.location.href="http://www.chaohuo.net/wxapp/forApp/false.html"; 
 			});
 
-			var id = common.getQueryString("id");
-			var token = common.getQueryString("token");
-			var userCollectionId = common.getQueryString("userCollectionId");
-			var oString = '',oContent,imgfileurl;
-			var show = common.getQueryString("show");
+		
 			
 			if(userCollectionId){
 				$('.headdelete').css('display','block');

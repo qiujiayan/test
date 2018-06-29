@@ -34,9 +34,9 @@ html,body{
 	font-size: .3rem;
 	color: #363636;
 }
-/* .yuepay{
+.yuepay{
 	display:none;
-} */
+}
 .yuepay,.wxpay,.zfbpay{
 	width: 7.02rem;
 	height: .9rem;
