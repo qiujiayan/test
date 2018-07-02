@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .input {
+            display: inline-block;
+        &:last-child {
+             border-right: 1px solid #999;
+         }
+        input {
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            width: 45px;
+            height: 45px;
+            outline:none;
+            font-family: inherit;
+            font-size: 28px;
+            font-weight: inherit;
+            text-align: center;
+            line-height: 45px;
+            color: #c2c2c2;
+            background: rgba(255,255,255,0);
+        }
+        }
+    </style>
+
+    <title>Title</title>
+</head>
+<body>
+<div class="input">
+    <input type="tel" placeholder="随" maxlength="1">
+   <input type="tel" placeholder="机" maxlength="1">
+    <input type="tel" placeholder="5" maxlength="1">
+    <input type="tel" placeholder="位" maxlength="1">
+    <input type="tel" placeholder="数" maxlength="1">
+</div>
+
+
+</body>
+</html>
+<script>
+
+    /**
+     * 模拟支付宝的密码输入形式
+     */
+    (function (window, document) {
+        var active = 0,
+            inputBtn = document.querySelectorAll('input');
+        for (var i = 0; i < inputBtn.length; i++) {
+            inputBtn[i].addEventListener('click', function () {
+                inputBtn[active].focus();
+            }, false);
+            inputBtn[i].addEventListener('focus', function () {
+                this.addEventListener('keyup', listenKeyUp, false);
+            }, false);
+            inputBtn[i].addEventListener('blur', function () {
+                this.removeEventListener('keyup', listenKeyUp, false);
+            }, false);
+        }
+
+        /**
+         * 监听键盘的敲击事件
+         */
+        function listenKeyUp() {
+            var beginBtn = document.querySelector('#beginBtn');
+            if (!isNaN(this.value) && this.value.length != 0) {
+                if (active < 4) {
+                    active += 1;
+                }
+                inputBtn[active].focus();
+            } else if (this.value.length == 0) {
+                if (active > 0) {
+                    active -= 1;
+                }
+                inputBtn[active].focus();
+            }
+            if (active >= 4) {
+                var _value = inputBtn[active].value;
+                if (beginBtn.className == 'begin-no' && !isNaN(_value) && _value.length != 0) {
+                    beginBtn.className = 'begin';
+                    beginBtn.addEventListener('click', function () {
+                        calculate.begin();
+                    }, false);
+                }
+            } else {
+                if (beginBtn.className == 'begin') {
+                    beginBtn.className = 'begin-no';
+                }
+            }
+        }
+    })(window, document);
+</script>

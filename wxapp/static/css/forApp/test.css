@@ -1,0 +1,80 @@
+
+.pwd-box{
+    width:310px;
+    height: 220px;
+    left:50%;
+    top:10%;
+    margin-left: -155px;
+    position: absolute;
+    border: none;
+    background: white;
+    z-index: 101;
+}
+.pwd-box input[type="number"]{
+    width:248px;
+    height: 45px;
+    color: transparent;
+    position: absolute;
+    top: 140px;
+    left:50%;
+    margin-left: -124px;
+    border: none;
+    font-size:12px;
+    opacity: 0;
+    z-index: 1;z-index: 9;
+    letter-spacing: 35px;
+
+}
+
+.fake-box{font-size: 0px;
+    width:248px;margin: 0 auto;
+    margin-top: 30px;box-sizing: border-box;
+    border:1px solid #bfb6b6;
+}
+.fake-box input{
+    width:41px;
+    height: 41px;
+    border: none;
+    border-right: 1px solid #e5e5e5;
+    text-align: center;
+    font-size: 18px;border-radius: 0px;
+    margin:0 !important;box-sizing: border-box;
+}
+.fake-box input:nth-last-child(1){
+    border:none;
+}
+#box-title{
+    height: 40px;
+    width:100%;
+    border-bottom: 0.2px solid #e5e5e5;
+}
+#title-text{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    line-height: 27px;
+    display: block;
+    margin-left: 55px;
+    margin-top: 10px;
+}
+#money-box{
+    width: 100%;
+    height: 50px;
+}
+#content-text{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    line-height: 27px;
+    display: block;
+    margin-left: 55px;
+    margin-top: 10px;
+    font-size: 22px;
+}
+#forget-pwd{
+    margin-top:5px;
+    margin-right: 15px;
+    float: right;
+    text-decoration:none;
+    color: #666;
+}

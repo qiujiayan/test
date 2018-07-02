@@ -41,87 +41,55 @@
 	<p class="payway">
 		支付方式
 	</p>
-	<div class="yuepay">
-		<img src="../static/images/share/yue.png" class="yuepng" />
-		<span>余额</span>
-		<img src="../static/images/share/check.png" class="yuepay-check" />
-	</div>
+
 	<div class="wxpay">
 		<img src="../static/images/share/wx.png" class="wxpng" />
 		<span>微信</span>
-		<img src="../static/images/share/nocheck.png" class="wxpay-check" />
+		<img src="../static/images/share/check.png" class="wxpay-check" />
 	</div>
+
 	<div class="zfbpay">
 		<img src="../static/images/share/zfb.png" class="zfbpng" />
 		<span>支付宝</span>
 		<img src="../static/images/share/nocheck.png" class="zfbpay-check" />
 	</div>
+	<div class="yuepay">
+		<img src="../static/images/share/yue.png" class="yuepng" />
+		<span>余额</span>
+		<img src="../static/images/share/nocheck.png" class="yuepay-check" />
+	</div>
+
 	<div class="atoncePay">
 		立即支付
 	</div>
 	<!--输入支付密码密码-->
-	<div class="passwordBg" style="z-index:999;">
-		<div class="passwordWrap">
-			<div class="top">
-				请输入支付密码
-				<span>X</span>
+	<div class="pwd-box">
+		<div class="item_con" >
+			<span id="close_span">x</span>
+			<div id="box-title">
+				<span id="title-text">请输入支付密码</span>
 			</div>
-			<div class="bottom">
-				<p class="title">超火红包</p>
-				<p class="money" id="look_money"></p>
-				<ul class="mm_box">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+			<div id="money-box">
+				<div id="money-title">
+					<span id="title-text">超火红包</span>
+				</div>
+				<div id="money-content">
+					<span id="content-text"></span>
+				</div>
+			</div>
+			<!-- <input type="range" name="points" min="0" max="9" maxlength="6" class="pwd-input" id="pwd-input"> -->
+			<input type="number" pattern="[0-9]*" oninput="if(value.length>5)value=value.slice(0,6)" autofocus="autofocus" min="0" max="9" class="pwd-input"
+			 id="pwd-input" />
+			<div class="fake-box">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
 			</div>
 		</div>
-		<div class="numb_box">
-			<div class="xiaq_tb">
-				<img src="../static/images/share/jftc_14.jpg" height="10">
-			</div>
-			<ul class="nub_ggg">
-				<li>
-					<a href="javascript:void(0);" class="zf_num">1</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">2</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">3</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">4</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">5</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">6</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">7</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">8</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">9</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_empty">清空</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">0</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_del">删除</a>
-				</li>
-			</ul>
-		</div>
+
 	</div>
 	<!-- 是否去设置支付密码的弹窗 -->
 	<div class="prompt">

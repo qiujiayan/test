@@ -10,20 +10,20 @@ var doName, mainUrl, rescUrl,webDoName;
 
 //生产环境
 
-doName = "https://www.chaohuo.net:7090/app";//线上地址
-webDoName = "https://www.chaohuo.net:7090/web";//田接口本地地址
-mainUrl = "https://www.chaohuo.net/wxapp";
-rescUrl = "https://www.chaohuo.net/";
+// doName = "https://www.chaohuo.net:7090/app";//线上地址
+// webDoName = "https://www.chaohuo.net:7090/web";//田接口本地地址
+// mainUrl = "https://www.chaohuo.net/wxapp";
+// rescUrl = "https://www.chaohuo.net/";
 
 //测试环境
 
-// doName ="http://123.206.108.84:8099/app"
-// webDoName = "http://123.206.108.84:8099/web";
-// mainUrl = "http://192.168.1.101:8080/wxapp";
-// rescUrl = "http://192.168.1.101:8080";
+doName ="http://123.206.108.84:8099/app"
+webDoName = "http://123.206.108.84:8099/web";
+mainUrl = "http://192.168.1.101:8080/wxapp";
+rescUrl = "http://192.168.1.101:8080";
 // mainUrl = "https://www.chaohuo.net/test";
 // rescUrl = "https://www.chaohuo.net/";
-seajs.config({
+seajs.config({ 
     base: rescUrl,
     alias: {
         // zepto: "wxapp/static/js/plugins/zepto.min",

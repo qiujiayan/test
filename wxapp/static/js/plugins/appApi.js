@@ -780,10 +780,11 @@ define(function (require, exports, module) {
 	}
 
 	// 验证支付密码（修改密码时，旧密码验证）
-	function isCheckPayPassword(token,payPasswordInfo,show,callback){
-		console.log(payPasswordInfo.payPassWord);
+	function isCheckPayPassword(token,payPassWord,show,callback){
+		// alert(payPassWord)
+		console.log(payPassWord);
 		var redZfbData = {
-			payPassWord: payPasswordInfo.payPassWord
+			payPassWord: payPassWord
 		}
 		var yzdata = JSON.stringify(redZfbData);
 		$.ajax({

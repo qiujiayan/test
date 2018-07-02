@@ -7,55 +7,36 @@ define(function (require) {
 			var passwordAgain = "";
 			var password, confirmPassword;
 			var type = 1;
-			//数字显示隐藏
-			$(".xiaq_tb").click(function () {
-				$(".numb_box").slideUp(300);
-			});
-			$(".mm_box").click(function () {
-				$(".numb_box").slideDown(300);
-			});
-			var i = 0;
-			$(".nub_ggg li .zf_num").click(function () {
-				if (i < 6) {
-					$(".mm_box li").eq(i).addClass("mmdd");
-					$(".mm_box li").eq(i).attr("data", $(this).text());
-					i++
+			var $input = $(".fake-box input");
+			document.getElementById("pwd-input").focus();
+			$("#pwd-input").on("input", function () {
+				var pwd = $(this).val().trim();
+				for (var i = 0, len = pwd.length; i < len; i++) {
+					$input.eq("" + i + "").val(pwd[i]);
 				}
-				if (i == 6) {
-					setTimeout(function () {
-						$(".mm_box li").each(function () {
-							passwordAgain += $(this).attr("data");
+				$input.each(function () {
+					var index = $(this).index();
+					if (index >= len) {
+						$(this).val("");
+					}
+				});
+				if (len == 6) {
+					var passwordAgain = pwd;
+					confirmPassword = passwordAgain;
+					$("#pwd-input").val("");
+					if (passwordFirst == passwordAgain) {
+						window.location.href = "FindPasswordCode.html?token=" + token + "&passwordAgain=" + passwordAgain;
+
+					} else {
+						$.dialog({
+	                        content: "两次密码输入不一致,请重新输入。",
+	                        title: "alert",
+	                        time: "2000"
 						});
-						password = passwordFirst;
-						confirmPassword = passwordAgain;
-
-						if (passwordFirst == passwordAgain) {
-							window.location.href="FindPasswordCode.html?token="+token+"&passwordAgain="+passwordAgain;
-				
-						} else {
-
-							$('.falseDetail').show();
-						}
-					}, 100);
-
-				};
-			});
-			$(".nub_ggg li .zf_del").click(function () {
-				if (i > 0) {
-					i--
-					$(".mm_box li").eq(i).removeClass("mmdd");
-					$(".mm_box li").eq(i).attr("data", "");
+						window.location.href = "FindPayPassword.html?token=" + token;
+					}
 				}
 			});
-			$(".nub_ggg li .zf_empty").click(function () {
-				$(".mm_box li").removeClass("mmdd");
-				$(".mm_box li").attr("data", "");
-				i = 0;
-			});
-
-
-
-
 		});
 	});
 });
