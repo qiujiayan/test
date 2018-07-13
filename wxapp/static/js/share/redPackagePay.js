@@ -10,24 +10,24 @@ define(function (require) {
 			var targetType = common.getQueryString("targetType");
 			var orderType = common.getQueryString("orderType");
 			var yMoney = common.getQueryString("yMoney");
-			// var yMoney = 0.01;
-
+			// var yMoney = 1;
+			// var Money=1
 			var dsc = common.getQueryString("dsc");
 			var show = common.getQueryString("show");
 			var redPacketCount = common.getQueryString("redPacketCount");
-			// var token ="386655ff1cb47bd545978e59df8bce95"
+			// var token ="362df1f024abadf0842cb44890488a01"
 			var token = common.getQueryString("token");
 
 			var appVersion = common.getQueryString("appVersion");
-			var payType = 2;
+			var payType = 3;
 
 			//var targetId=5018,targetType=1,orderType=1,yMoney=0.01,dsc,redPacketCount=1,tradetType,openid,token="8f7d664c59b96e137184bfa8987c816f";
 			// var appVersion = "1.9.3"
-			if (appVersion == "1.9.3") {
-				$('.yuepay').show();
-			} else {
-				$('.yuepay').hide();
-			}
+			// if (appVersion == "1.9.3") {
+			// 	$('.yuepay').show();
+			// } else {
+			// 	$('.yuepay').hide();
+			// }
 
 
 			$('.money .right').html(yMoney + "元");
@@ -156,66 +156,68 @@ define(function (require) {
 
 			});
 			var payPassWord = "";
-			$(function () {
-				var $input = $(".fake-box input");
-				document.getElementById("pwd-input").focus();
-				$("#pwd-input").on("input", function () {
-					var pwd = $(this).val().trim();
-					for (var i = 0, len = pwd.length; i < len; i++) {
-						$input.eq("" + i + "").val(pwd[i]);
+			var $input = $(".fake-box input");
+			document.getElementById("pwd-input").focus();
+			$("#pwd-input").on("input", function () {
+				var pwd = $(this).val().trim();
+				for (var i = 0, len = pwd.length; i < len; i++) {
+					$input.eq("" + i + "").val(pwd[i]);
+				}
+				$input.each(function () {
+					var index = $(this).index();
+					if (index >= len) {
+						$(this).val("");
 					}
-					$input.each(function () {
-						var index = $(this).index();
-						if (index >= len) {
-							$(this).val("");
+				});
+				if (len == 6) {
+					// targetId = 53;
+					// targetType = 2;
+					// orderType = 2;
+					// redPacketCount = 0;
+					tradetType = "MWEB";
+					payPassWord = pwd;
+					appApi.walletAddRedPacketOrder(targetId, targetType, orderType,yMoney, dsc, redPacketCount, tradetType, token, payPassWord, show, function (reqs) {
+
+						console.log(reqs);
+						if (reqs.code == 1) {
+							orderNo = reqs.content;
+							alert("支付成功");
+							// alert(oderNo);
+							window.location.href = "protocol://redYue?" + orderNo;
+							iTimer = setTimeout(function () {
+								window.location.href = "second.html?orderNo=" + orderNo;
+							}, 500);
+						} else if (reqs.code == 2) {
+							$.dialog({
+								content: reqs.msg,
+								title: "alert",
+								time: "2000"
+							});
+							setTimeout(function () {
+								window.location.reload();
+							}, 2000)
+							// $(".passwordBg").hide();
+
+							$(".mm_box li").removeClass("mmdd");
+							$(".mm_box li").attr("data", "");
+							i = 0;
+
+						} else {
+							$.dialog({
+								content: reqs.msg,
+								title: "alert",
+								time: "2000"
+							});
 						}
-					});
-					if (len == 6) {
-						tradetType = "MWEB";
-						payPassWord = pwd;
-						appApi.walletAddRedPacketOrder(targetId, targetType, orderType, yMoney, dsc, redPacketCount, tradetType, token, payPassWord, show, function (reqs) {
 
-							console.log(reqs);
-							if (reqs.code == 1) {
-								orderNo = reqs.content;
-								// alert("支付成功");
-								// alert(oderNo);
-								window.location.href = "protocol://redYue?" + orderNo;
-								iTimer = setTimeout(function () {
-									window.location.href = "second.html?orderNo=" + orderNo;
-								}, 500);
-							} else if (reqs.code == 2) {
-								$.dialog({
-									content: reqs.msg,
-									title: "alert",
-									time: "2000"
-								});
-								setTimeout(function () {
-									window.location.reload();
-								}, 2000)
-								// $(".passwordBg").hide();
+					})
+				}				
+			});
+			$("#close_span").click(function () {
+				$("#pwd-input").val("");
+				$input.val("");
+				$(".pwd-box").hide();
 
-								$(".mm_box li").removeClass("mmdd");
-								$(".mm_box li").attr("data", "");
-								i = 0;
-
-							} else {
-								$.dialog({
-									content: reqs.msg,
-									title: "alert",
-									time: "2000"
-								});
-							}
-
-						})
-					}
-				});
-				$("#close_span").click(function(){
-					$("#pwd-input").val("");
-					$input.val("");
-					$(".pwd-box").hide();
-					
-				});
 			});
 		});
 	});

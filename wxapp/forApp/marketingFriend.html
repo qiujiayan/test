@@ -19,15 +19,15 @@
     <META HTTP-EQUIV="pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
     <META HTTP-EQUIV="expires" CONTENT="0">
-    <title>营销</title>
+    <title>我的铁杆</title>
     <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
     <script src="../vendor/sea.js"></script>
     <script src="../vendor/config.js"></script>
-    <!-- <script src="../vendor/resourceLoad.js"></script> -->
+    <script src="../vendor/resourceLoad.js"></script>
     <script src="../vendor/rem.js"></script>
     <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
     <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
-    <link type="text/css" href="../static/css/forApp//marketingProfit.css" rel="styleSheet" />
+    <link type="text/css" href="../static/css/forApp/marketingFriend.css" rel="styleSheet" />
 </head>
 
 <body>
@@ -36,22 +36,55 @@
             <span class="iconfont" onclick="history.back();">&#xe60b;</span>
         </span>
         <span class="head_title">
-            我的收益
+            我的铁杆
         </span>
     </header>
-    <div class="title">
-        <p>总收益（元）</p>
-        <span></span>
+
+    <div class="fir_tit">
+       
     </div>
-    <div class="mingxi">
-        <h5>收益来历</h5>
-        <ul id="mingxi_con">
-            
-        </ul>
+
+
+    <div class="chose_tit">
+        <span class="on">一级铁杆（<b id="one_num"></b>）
+            <em>
+                <img src="../static/images/marketing/Triangle.png" alt="">
+            </em>
+        </span>
+        <span>二级铁杆（<b id="two_num"></b>）
+            <em>
+                <img src="../static/images/marketing/Triangle.png" alt="">
+            </em>
+        </span>
     </div>
+
+    <!-- 一级铁杆 -->
+    <div class="fir_con" id="one">
+        <!-- <div class="item">
+            <div class="pic">
+                <img src="http://chaohuo.net/images/a.jpg" alt="">
+            </div>
+            <div class="text">
+                <h4>22222（6）
+                    <em>2017/05/06</em>
+                </h4>
+                <p>赚取收益：¥10.00</p>
+                <p>群内支付：¥66.00</p>
+            </div>
+            <div class="more">
+                <img src="../static/images/marketing/Rectangle.png" alt="">
+            </div>
+        </div>        -->
+    </div>
+    <!-- 二级铁杆 -->
+    <div class="fir_con"  id="two" style="display: none;">
+        
+    </div>
+
+
 </body>
 
 </html>
 <script>
-    seajs.use('../static/js/forApp/marketingProfit');
+    seajs.use('../static/js/forApp/marketingFriend');
 </script>

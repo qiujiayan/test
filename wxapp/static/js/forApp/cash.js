@@ -10,6 +10,8 @@ define(function (require) {
 			var show = common.getQueryString("show");
 			var payStatus, payPassword;
 
+
+
 			//修改支付宝
 			$('.modifyzfb').on('click', function () {
 				console.log(1);
@@ -32,7 +34,7 @@ define(function (require) {
 				}
 			});
 
-			appApi.getWithdeawPage(token, show,function (reqs) {
+			appApi.getWithdeawPage(token, show, function (reqs) {
 				console.log(reqs);
 				if (reqs.code == 1) {
 					ofee = reqs.content.fee;
@@ -54,7 +56,7 @@ define(function (require) {
 			});
 
 			//查询支付宝账户
-			appApi.getOneWithdrawNumber(token,show, function (reqs) {
+			appApi.getOneWithdrawNumber(token, show, function (reqs) {
 				//console.log(reqs);
 				if (reqs.code == 1) {
 					$('.addmiddle .zfbname').html("姓名： " + reqs.content.name);
@@ -77,7 +79,7 @@ define(function (require) {
 				var balance = $("#balance").text();
 				console.log(money)
 				//提现金额不得小于100.00
-				if(isNaN(money)){
+				if (isNaN(money)) {
 					$.dialog({
 						content: "提现金额不能空",
 						title: "alert",
@@ -106,9 +108,14 @@ define(function (require) {
 								$('.bindbg').show();
 								break;
 							case 1://已设置支付账户
-								$('.passwordBg').show();
-								$('.passwordBg .money').html(money + "元");
-								$('.passwordBg .payFee span').html(feeMoney);
+								$('.pwd-box .money').html(money + "元");
+								$('.pwd-box .payFee span').html(feeMoney);
+								setTimeout(function () {
+									$('.pwd-box').show();
+								}, 800)
+								
+							
+
 								break;
 						}
 						//					appApi.withdrawMoney(token,money,tableId,function(reqs){
@@ -141,78 +148,52 @@ define(function (require) {
 				window.location.href = "setPassword.html?token=" + token;
 			});
 
-			// $('.passwordBg input').on('input',function(){
-			// 	if($(this).val() != ''){
-			// 		$(this).blur();
-			// 		$(this).attr("type","password");
-			// 		$(this).parent().next().find("input").focus();
-			// 	}
-			// 	if($('.pass1 input').val() != '' && $('.pass2 input').val() != ''&&$('.pass3 input').val() != ''&&$('.pass4 input').val() != ''&&$('.pass5 input').val() != ''&&$('.pass6 input').val() != ''){
-			// 		money = $('.mymoney').val();
-			// 		feeMoney = $('.chargem').html();
-			// 		payPassword = $('.pass1 input').val() + $('.pass2 input').val()+ $('.pass3 input').val()+ $('.pass4 input').val()+ $('.pass5 input').val()+ $('.pass6 input').val();
+			document.activeElement.blur();
 
-			//数字显示隐藏
-			var data = "";
-			$(".mm_box").click(function () {
-				$(".numb_box").show();
 
-			});
-			$(".xiaq_tb").click(function () {
-				$(".numb_box").hide();
-
-			});
-			var i = 0;
-			$(".nub_ggg li .zf_num").click(function () {
-				if (i < 6) {
-					$(".mm_box li").eq(i).addClass("mmdd");
-					$(".mm_box li").eq(i).attr("data", $(this).text());
-					i++
+			var $input = $(".fake-box input");
+			$("#pwd-input").on("input", function () {
+				document.getElementById("pwd-input").focus();
+				var pwd = $(this).val().trim();
+				for (var i = 0, len = pwd.length; i < len; i++) {
+					$input.eq("" + i + "").val(pwd[i]);
 				}
-				if (i == 6) {
-					setTimeout(function () {
-						$(".mm_box li").each(function () {
-							data += $(this).attr("data");
-						});
-						// alert("支付成功");
-						payPassword = data;
-						appApi.withdrawMoney(token, payPassword, money, tableId, show,function (reqs) {
-							console.log(reqs);
-							if (reqs.code == 1) {
-								window.location.href = "progress.html?owalletAmount=" + money + "&ofee=" + ofee + "&ocardNum=" + ocardNum;
-							} else {
-								// 密码输入错误时,会提示密码错误
-								$.dialog({
-									content: reqs.msg,
-									title: "alert",
-									time: "2000"
-								});
-								// 密码输入错误时,清除密码
-								// alert("111");
-								$(".mm_box li").removeClass("mmdd");
-								$(".mm_box li").attr("data", "");
-								i = 0;
-								// setTimeout(function () {
+				$input.each(function () {
+					var index = $(this).index();
+					if (index >= len) {
+						$(this).val("");
+					}
+				});
+				if (len == 6) {
+					payPassword = pwd;
+					appApi.withdrawMoney(token, payPassword, money, tableId, show, function (reqs) {
+						console.log(reqs);
+						if (reqs.code == 1) {
+							window.location.href = "progress.html?owalletAmount=" + money + "&ofee=" + ofee + "&ocardNum=" + ocardNum;
+						} else {
+							// 密码输入错误时,会提示密码错误
+							$.dialog({
+								content: reqs.msg,
+								title: "alert",
+								time: "2000"
+							});
+							//  这里写密码错误之后 的跳转
+							setTimeout(function () {
+								$("#pwd-input").val("");
+								$input.val("");
+							}, 2000)
 
-								// 	location.reload();
-								// }, 2000)
-							}
-						});
+						}
+					});
 
-					}, 100);
-				};
-			});
-			$(".nub_ggg li .zf_del").click(function () {
-				if (i > 0) {
-					i--
-					$(".mm_box li").eq(i).removeClass("mmdd");
-					$(".mm_box li").eq(i).attr("data", "");
 				}
 			});
-			$(".nub_ggg li .zf_empty").click(function () {
-				$(".mm_box li").removeClass("mmdd");
-				$(".mm_box li").attr("data", "");
-				i = 0;
+			$("#close_span").click(function () {
+				$("#pwd-input").val("");
+				$input.val("");
+				$(".pwd-box").hide();
+		
+
 			});
 
 		});

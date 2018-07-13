@@ -4,7 +4,7 @@ body,html{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background-image: url(/wxapp/static/images/marketing/market_bg.png);
+	background-image: url(../../../images/marketing/market_bg.png);
 	background-size: cover
 }
 

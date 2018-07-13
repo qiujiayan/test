@@ -1,0 +1,87 @@
+
+body,html{
+	/* background-color: #efeff4; */
+	width: 100%;
+}
+
+header{
+	width: 7.02rem;
+	padding: 0 .24rem;
+	height: .88rem;
+	line-height: .88rem;
+	background: #fff;
+	color: #333;
+	text-align: center;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index: 999;
+}
+header .iconfont{
+	font-size: .4rem;
+	margin-top: .02rem;
+}
+header .headleft{
+	float: left;
+	font-size: 20px;
+}
+.fir_tit{margin-top: 45px;background-color: #f3f3f3;padding: 12px 15px;}
+.fir_tit img{width:40px;height:40px;display: inline-block;vertical-align: middle;}
+.fir_tit span{font-size: 16px;color: #363636;}
+.fir_tit em{float: right;font-size: 16px;color: #363636;margin-top: 8px;}
+
+.chose_tit{background-color: #FF1400;font-size: 0;}
+.chose_tit span{font-size: 18px;color: #fff;display: inline-block;
+	width: 50%;text-align: center;height: 60px;line-height: 60px;position: relative;
+}
+.chose_tit span em{position: absolute;bottom: -1px;width: 15px;height: 15px;left: 50%;
+	margin-left: -8px;display: inline-block;display: none;
+}
+.chose_tit span em img{width: 100%;}
+.chose_tit span.on em{display: block;}
+.fir_con{padding-left: 15px;box-sizing: border-box;}
+.fir_con .item{padding-right: 15px;padding-top: 15px;padding-bottom: 15px;padding-left: 40px;
+	overflow:hidden;box-sizing: border-box;position: relative;border-bottom: 1px solid #ddd;
+
+}
+.fir_con .item .pic{width: 40px;float: left;margin-left: -40px;}
+/* .fir_con .item a{display: block;} */
+.fir_con .item .pic img{width: 40px;height: 40px;}
+.fir_con .item .text{float: left;padding-left: 15px;width: 100%;}
+.fir_con .item .text h4{font-size: 0.32rem;font-weight: normal;display: block;width: 100%;
+	box-sizing: border-box;padding-right: 15px;position: relative;padding-right:105px;;
+}
+.fir_con .item .text h4 span{width: 100%;word-break:break-all;}
+.fir_con .item .text h4 em{float: right;display:block;font-size:0.3rem;color: #979797;width: 90px;
+	position: absolute;right: 0;top:50%;transform: translateY(-50%);
+}
+.fir_con .item .text p{font-size: .3rem;color: #979797;margin-top: 8px;}
+
+.fir_con .item .more{position: absolute;right: 15px;top:55%;}
+.fir_con .item .more img{width:10px;height: 19px;}
+
+.mt48{margin-top: 48px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ body,html{
 	background-color: white;
 	width: 100%;
 	height: 100%;
+	/* position: fixed; */
 }
 /* 苹果手机网站取消点击后的阴影 */
 *{ -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent; /* For some Androids */ }  
@@ -20,7 +21,7 @@ header{
 	padding: 0 .24rem;
 	height: .88rem;
 	line-height: .88rem;
-	background: #262626;
+	background: #ffffff;
 	color: #000;
 	font-size: .35rem;
 	text-align: center;
@@ -151,6 +152,7 @@ header{
 	margin-left: .55rem;
 	margin-top: .41rem;
 }
+.oh{overflow: hidden;}
 
 /*账单详情页*/
 .cdname{
@@ -231,7 +233,7 @@ header .iconfont{
 	top: 0;
 	background: rgba(0,0,0,.3);
 }
-.bindbg .bindWrap{
+/* .bindbg .bindWrap{
 	width: 6.4rem;
 	height: 2.6rem;
 	background: #fff;
@@ -325,7 +327,7 @@ header .iconfont{
 	color: #ff1400;
 	text-align: center;	
 	line-height: .6rem;
-}
+} */
 
 /* .passwordBg .passwordWrap .bottom .passWrap{
 	width: 100%;
@@ -338,18 +340,18 @@ header .iconfont{
 	height: .82rem;
 	margin: 0 auto;
 } */
-.passwordBg .passwordWrap ul li{
+/* .passwordBg .passwordWrap ul li{
 	width:16.3%;
 	height: 40px;;
 	float: left;
-	text-align: center;
+	text-align: center; */
 	/* border-top: .01rem solid rgba(151,151,151,0.50);
 	border-bottom: .01rem solid rgba(151,151,151,0.50);
 	border-left: .01rem solid rgba(151,151,151,0.50);
 	cursor: pointer; */
 	
-}
-.passwordBg .passwordWrap ul .pass6{
+/* } */
+/* .passwordBg .passwordWrap ul .pass6{
 	border-right: .01rem solid rgba(151,151,151,0.50);
 }
 .passwordBg .passwordWrap ul li input{
@@ -359,6 +361,110 @@ header .iconfont{
 	cursor: pointer;
 }
 .xiaq_tb{text-align: center;}
-.xiaq_tb img{width: 25px;display: inline-block;}
+.xiaq_tb img{width: 25px;display: inline-block;} */
 
 
+
+
+
+.pwd-box{
+	position: fixed;width: 100%;height: 100%;left: 0;top: 0;
+	background-color: rgba(0, 0, 0, 0.3);z-index: 99999;
+   box-sizing: border-box;display: none;
+ }
+ .pwd-box input[type="number"]{padding-left: 20px;
+	 width:248px;
+	 height: 45px;
+	 color: transparent;
+	 position: absolute;
+	 top: 130px;
+	 left:50%;
+	 margin-left: -124px;
+	 border: none;
+	 font-size:12px;
+	 opacity: 0;
+	 z-index: 1;z-index: 9;
+	 letter-spacing: 35px;
+	 /* margin-left: -100%; */
+	 /* outline:none;  */
+	 
+	 /* 不显示输入框光标 */
+	  /*文本向左缩进*/
+	 text-indent: -999em;
+    /*输入框光标起始点向左左移*/
+	 margin-left: -100%; 
+	 /* 输入框增大一倍 */
+	 width: 200%;       
+	 opacity: 0;
+ }
+ .fake-box{font-size: 0px;
+	 width:248px;margin: 0 auto;
+	 margin-top: 30px;box-sizing: border-box;
+	 border:1px solid #bfb6b6;
+ }
+ .fake-box input{
+	 width:41px;
+	 height: 41px;
+	 border: none;
+	 border-right: 1px solid #e5e5e5;
+	 text-align: center;
+	 font-size: 18px;border-radius: 0px;
+	 margin:0 !important;box-sizing: border-box;
+	 /* -webkit-user-modify: read-write-plaintext-only;  */
+ }
+ .fake-box input:nth-last-child(1){
+	 border:none;
+ }
+ .item_con{background-color: #fff;width:90%;position:fixed;
+ left: 5%;top: 85px;border-radius: 5px;padding-bottom: 25px;}
+ #close_span{position: absolute;font-size: 25px;top: 3px;right:8px;color: #666;}
+ 
+ #box-title{
+	 height: 40px;
+	 width:100%;
+	 border-bottom: 0.2px solid #e5e5e5;
+ }
+ #title-text{
+	 height: 30px;
+	 width: 100%;
+	 text-align: center;
+	 line-height: 27px;
+	 display: block;
+	 margin-top: 10px;
+	 font-size: 16px;
+ }
+ #money-box{
+	 width: 100%;
+	 height: 50px;
+ }
+ #content-text{
+	 height: 30px;
+	 width:100%;
+	 text-align: center;
+	 line-height: 27px;
+	 display: block;
+	 margin-top: 10px;
+	 font-size: 24px;
+ }
+ #forget-pwd{
+	 margin-top:5px;
+	 margin-right: 15px;
+	 float: right;
+	 text-decoration:none;
+	 color: #666;
+ }
+
+ #money-box #money-title{
+	font-size:.3rem ;
+	color: #363636;
+	text-align: center;	
+	line-height:.6rem ;
+}
+#money-box #money-title .money{font-size: .4rem;}
+
+.pwd-box .item_con .payFee{
+	font-size:.3rem ;
+	color: #ff1400;
+	text-align: center;	
+	/* line-height: .6rem; */
+}

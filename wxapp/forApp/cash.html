@@ -96,72 +96,41 @@
 		</div>
 	</div>
 
-	<!--输入提现密码-->
-	<div class="passwordBg" style="z-index:999;">
-		<div class="passwordWrap">
-			<div class="top">
-				请输入交易密码
-				<span>X</span>
+	
+	<div class="pwd-box">
+		<div class="item_con" >
+			<span id="close_span">x</span>
+			<div id="box-title">
+				<span id="title-text">请输入交易密码</span>
 			</div>
-			<div class="bottom">
-				<p class="title">提现</p>
-				<p class="money">元</p>				
-				<ul class="mm_box">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-				<p class="payFee">额外扣除￥
-					<span></span>手续费</p>
+			<div id="money-box">
+				<div id="money-title">
+					<!-- <span id="title-text">提现</span> -->
+					<p class="title">提现</p>
+					<p class="money">元</p>	
+				</div>
+				<div id="money-content">
+					<span id="content-text"></span>
+				</div>
 			</div>
+			<!-- <input type="range" name="points" min="0" max="9" maxlength="6" class="pwd-input" id="pwd-input"> -->
+			<input type="number" pattern="[0-9]*" oninput="if(value.length>5)value=value.slice(0,6)" min="0" max="9" class="pwd-input"
+			 id="pwd-input" />
+			<div class="fake-box">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+				<input type="password" readonly="">
+			</div>
+			<p class="payFee">额外扣除￥
+				<span></span>手续费</p>
 		</div>
-		<div class="numb_box">
-			<div class="xiaq_tb">
-				<img src="../static/images/share/jftc_14.jpg" height="10">
-			</div>
-			<ul class="nub_ggg">
-				<li>
-					<a href="javascript:void(0);" class="zf_num">1</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">2</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">3</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">4</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">5</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">6</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">7</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">8</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_num">9</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_empty">清空</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zj_x zf_num">0</a>
-				</li>
-				<li>
-					<a href="javascript:void(0);" class="zf_del">删除</a>
-				</li>
-			</ul>
-		</div>
+
 	</div>
+
+
 </body>
 
 </html>

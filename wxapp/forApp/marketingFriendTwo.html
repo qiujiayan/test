@@ -19,43 +19,33 @@
     <META HTTP-EQUIV="pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
     <META HTTP-EQUIV="expires" CONTENT="0">
-    <title>设置交易密码</title>
+    <title>我的铁杆</title>
     <link type="text/css" href="../iconfont/iconfont.css" rel="styleSheet" />
     <script src="../vendor/sea.js"></script>
     <script src="../vendor/config.js"></script>
-    <script src="../vendor/resourceLoad.js"></script>
+    <!-- <script src="../vendor/resourceLoad.js"></script> -->
     <script src="../vendor/rem.js"></script>
-    <!-- <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" /> -->
+    <link type="text/css" href="../static/css/common/reset.css" rel="styleSheet" />
     <link type="text/css" href="../static/css/common/zepto.alert.css" rel="styleSheet" />
-    <link type="text/css" href="../static/css/forApp/FindPayPassword.css" rel="styleSheet" />
-    <link type="text/css" href="../static/css/forApp/zhifu.css" rel="styleSheet" />
-
+    <link type="text/css" href="../static/css/forApp/marketingFriend.css" rel="styleSheet" />
 </head>
 
 <body>
-    <header style="background: #fff;">
-        <span style="float: left;font-size: .36rem;" onclick="history.back();">
-            <span class="iconfont">&#xe60b;</span>
+    <header>
+        <span class="headleft helpback">
+            <span class="iconfont" onclick="history.back();">&#xe60b;</span>
         </span>
-        <span style="margin-left: -.18rem;">设置交易密码</span>
+        <span class="head_title">
+            <em id="name">xx</em>铁杆
+        </span>
     </header>
-    <div class="pwd-box">
-        <p>*请再次设置你的超火支付密码</p>
-        <input type="number" pattern="[0-9]*" oninput="if(value.length>5)value=value.slice(0,6)" min="0" max="9" class="pwd-input"
-            id="pwd-input" />
-        <div class="fake-box">
-            <input type="password" readonly="">
-            <input type="password" readonly="">
-            <input type="password" readonly="">
-            <input type="password" readonly="">
-            <input type="password" readonly="">
-            <input type="password" readonly="">
-        </div>
+    <!-- 一级铁杆 -->
+    <div class="fir_con" id="one" style ="display: block;margin-top:47px;">        
     </div>
-
+   
 </body>
 
 </html>
 <script>
-    seajs.use('../static/js/forApp/yueSetAgain');
+    seajs.use('../static/js/forApp/marketingFriendTwo');
 </script>

@@ -9,6 +9,13 @@ define(function (require, exports, module) {
         if (r != null) return decodeURIComponent(r[2]);
         return null;
     };
+    function aaa(name,_url) {
+        // alert(_url);
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = _url.substr(1).match(reg);
+        if (r != null) return decodeURIComponent(r[2]);
+        return null;
+    };
     function formatDate(now) { 
 		var year=now.getFullYear(); 
 		var month=now.getMonth()+1; 
@@ -34,6 +41,7 @@ define(function (require, exports, module) {
     }
     
     exports.getQueryString = getQueryString;
+    exports.aaa = aaa;
     exports.formatDate = formatDate;
     exports.htmlspecialcharsDecode = htmlspecialcharsDecode;
 });

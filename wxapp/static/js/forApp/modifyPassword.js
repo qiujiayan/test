@@ -25,15 +25,24 @@ define(function (require) {
 					// var token = "995d2f78f0e5b56c8bca958ba562a5cb";
 					var token = common.getQueryString("token");
 					var show = common.getQueryString("show");
-					// alert(token);					
+					// alert(token);	
+					console.log(payPassWord)				
 					appApi.isCheckPayPassword(token, payPassWord, show, function (reqs) {
-						console.log(reqs.code);
+						console.log(reqs.msg);
+						// 	console.log(msg);
 						if (reqs.code == 3) {
 							alert("登录过期");
 						}
 						else if (reqs.code == 2) {
-							alert("密码错误");
-							window.location.reload();
+							alert("密码错误,请重新输入");
+							// $.dialog({
+							// 	content:"密码错误" ,
+							// 	title: "alert",
+							// 	time: "1000"
+							// })
+							setTimeout(function () {
+								window.location.reload();
+							}, 500)
 						}
 						else if (reqs.code == 1) {
 							window.location.href = "PaySetPassword.html?token=" + token;

@@ -7,19 +7,15 @@ define(function (require) {
 
 			var token = common.getQueryString("token");
 			var show = common.getQueryString("show");
-			var appVersion =common.getQueryString("appVersion");
-			//var token = "2e2c48fdbbed2b5dc1926c78cb832424";
-			// var token = "995d2f78f0e5b56c8bca958ba562a5cb";
-			// var token = "a6cfb843361928123e4d4a4c8b7e0405";
+			var appVersion = common.getQueryString("appVersion");
 			var oHeader = '<div class="detailheader">明细</div>';
 			var oString = '';
 			var pageNum = 0;
 			var orderId, walletDetailType;
-			
+
 			//var name;
 			//var walletDetailTypeStr,createTime,no;
 			var clickBtn = false;
-			// appVersion="1.9.2"
 
 			$('.iosback').on('click', function () {
 				window.location.href = "protocol://finish";
@@ -28,7 +24,7 @@ define(function (require) {
 			$('.drawcash').on('click', function () {
 				if (clickBtn == true) {
 					//查询支付宝账户code等于1，已绑定。code等于2未绑定
-					appApi.getOneWithdrawNumber(token,show, function (reqs) {
+					appApi.getOneWithdrawNumber(token, show, function (reqs) {
 						//console.log(reqs);
 						if (reqs.code == 1) {
 							window.location.href = "cash.html?token=" + token;
@@ -40,21 +36,21 @@ define(function (require) {
 				}
 			});
 
-						// appApi.getWithdeawPage(token,show,function(reqs){
-						// 	console.log(reqs);
-						// 	if(reqs.code==1){
-						// 		name = reqs.content.cardDetail.name;
-						// 	}else{
-						// 		$.dialog({
-			            //          content: reqs.msg,
-			            //          title: "alert",
-			            //          time: "2000"
-			            //      })
-						// 	}
-						// });
+			// appApi.getWithdeawPage(token,show,function(reqs){
+			// 	console.log(reqs);
+			// 	if(reqs.code==1){
+			// 		name = reqs.content.cardDetail.name;
+			// 	}else{
+			// 		$.dialog({
+			//          content: reqs.msg,
+			//          title: "alert",
+			//          time: "2000"
+			//      })
+			// 	}
+			// });
 
 
-			appApi.getMyWalletInfos(token, pageNum, show,function (reqs) {
+			appApi.getMyWalletInfos(token, pageNum, show, function (reqs) {
 				console.log(reqs);
 				if (reqs.code == 1) {
 					clickBtn = true;
@@ -118,8 +114,8 @@ define(function (require) {
 				var windowHeight = $(this).height();
 				if (scrollTop + windowHeight == scrollHeight) {
 					pageNum++;
-					appApi.getMyWalletInfos(token, pageNum, show,function (reqs) {
-						//console.log(reqs);
+					appApi.getMyWalletInfos(token, pageNum, show, function (reqs) {
+						console.log(reqs);
 						if (reqs.code == 1) {
 							oString = '';
 							var oListMore = reqs.content.walletInfos;
@@ -206,20 +202,20 @@ define(function (require) {
 				//				})
 
 			});
-			if(appVersion=="1.9.3"){
-				$("#link").click(function(){
-					window.location.href = "paymentCenter.html?token=" + token;				
-				});
-			}else{
-				$("#link").click(function(){
-					window.location.href = "walletquestion.html";			
-				});
-			}
-			
+			// if(appVersion=="1.9.3"){
+			// 	$("#link").click(function(){
+			// 		window.location.href = "paymentCenter.html?token=" + token;				
+			// 	});
+			// }else{
+			// 	$("#link").click(function(){
+			// 		window.location.href = "walletquestion.html";			
+			// 	});
+			// }
 
-			// $("#link").click(function(){
-			// 	window.location.href = "paymentCenter.html?token=" + token;				
-			// });
+
+			$("#link").click(function () {
+				window.location.href = "paymentCenter.html?token=" + token;
+			});
 
 
 

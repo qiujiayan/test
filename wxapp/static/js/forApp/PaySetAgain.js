@@ -33,8 +33,16 @@ define(function (require) {
 						appApi.setPayPassword(token, password, confirmPassword, type, show, function (reqs) {
 							console.log(reqs);
 							if (reqs.code == 1) {
-								alert("修改成功");
-								window.location.href = "paymentCenter.html?token=" + token;
+								// alert("修改成功");
+								$.dialog({
+									content:"设置成功",
+									title: "alert",
+									time: "2000"
+								});
+								setTimeout(function () {
+									window.location.href = "paymentCenter.html?token=" + token;
+								}, 1500); 
+								
 							}
 							else if (reqs.code == 2) {
 								alert("您设置的新密码与原密码相同,请重新输入");

@@ -34,9 +34,9 @@ html,body{
 	font-size: .3rem;
 	color: #363636;
 }
-.yuepay{
+/* .yuepay{
 	display:none;
-}
+} */
 .yuepay,.wxpay,.zfbpay{
 	width: 7.02rem;
 	height: .9rem;
@@ -125,7 +125,12 @@ html,body{
     font-size:12px;
     opacity: 0;
     z-index: 1;z-index: 9;
-    letter-spacing: 35px;
+	letter-spacing: 35px;
+	 /* 不显示输入框光标 */
+	 text-indent: -999em; /*文本向左缩进*/
+	 margin-left: -100%; /*输入框光标起始点向左左移*/
+	 width: 150%;       /* 输入框增大一倍 */
+	 opacity: 0;
 }
 .fake-box{font-size: 0px;
     width:248px;margin: 0 auto;
@@ -146,7 +151,7 @@ html,body{
 }
 .item_con{background-color: #fff;width:90%;position: absolute;
 left: 5%;top: 85px;border-radius: 5px;padding-bottom: 25px;}
-#close_span{position: absolute;font-size: 18px;top: 5px;right:8px;color: #666;}
+#close_span{position: absolute;font-size: 25px;top: 3px;right:8px;color: #666;}
 
 #box-title{
     height: 40px;

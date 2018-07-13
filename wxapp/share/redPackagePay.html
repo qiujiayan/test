@@ -42,10 +42,15 @@
 		支付方式
 	</p>
 
+	<div class="yuepay">
+		<img src="../static/images/share/yue.png" class="yuepng" />
+		<span>余额</span>
+		<img src="../static/images/share/check.png" class="yuepay-check" />
+	</div>
 	<div class="wxpay">
 		<img src="../static/images/share/wx.png" class="wxpng" />
 		<span>微信</span>
-		<img src="../static/images/share/check.png" class="wxpay-check" />
+		<img src="../static/images/share/nocheck.png" class="wxpay-check" />
 	</div>
 
 	<div class="zfbpay">
@@ -53,11 +58,7 @@
 		<span>支付宝</span>
 		<img src="../static/images/share/nocheck.png" class="zfbpay-check" />
 	</div>
-	<div class="yuepay">
-		<img src="../static/images/share/yue.png" class="yuepng" />
-		<span>余额</span>
-		<img src="../static/images/share/nocheck.png" class="yuepay-check" />
-	</div>
+	
 
 	<div class="atoncePay">
 		立即支付
@@ -78,7 +79,7 @@
 				</div>
 			</div>
 			<!-- <input type="range" name="points" min="0" max="9" maxlength="6" class="pwd-input" id="pwd-input"> -->
-			<input type="number" pattern="[0-9]*" oninput="if(value.length>5)value=value.slice(0,6)" autofocus="autofocus" min="0" max="9" class="pwd-input"
+			<input type="number" pattern="[0-9]*" oninput="if(value.length>5)value=value.slice(0,6)" min="0" max="9" class="pwd-input"
 			 id="pwd-input" />
 			<div class="fake-box">
 				<input type="password" readonly="">

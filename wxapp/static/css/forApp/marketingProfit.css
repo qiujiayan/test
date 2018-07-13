@@ -17,6 +17,7 @@ header{
 	left: 0;
 	top: 0;
 	overflow: hidden;
+	z-index: 999;
 }
 header .iconfont{
 	font-size: .4rem;
@@ -33,9 +34,13 @@ header .headleft{
 	color: #323232;font-size: 20px;
 }
 .mingxi ul{padding-left: 15px;}
-.mingxi li{line-height: 48px;border-bottom: 1px solid #ddd;padding-right: 15px;color: #323232;}
-.mingxi span{font-size: 18px;}
-.mingxi em{float: right;font-size: 18px;}
+.mingxi li{line-height: 40px;border-bottom: 1px solid #ddd;padding-right: 15px;color: #323232;
+	position: relative;font-size: 0;
+}
+.mingxi span{font-size: 18px;display: inline-block;width: 80%;}
+.mingxi em{font-size: 18px;display: inline-block;width:20%;text-align: right;
+	position: absolute;top:50%;transform: translateY(-50%);
+}
 
 
 
