@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70022679-e305-4ecf-befd-c27e1a958964" name="Default" comment="官网">
+    <list default="true" id="70022679-e305-4ecf-befd-c27e1a958964" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chaofire官网" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/cash.html" afterPath="$PROJECT_DIR$/wxapp/forApp/cash.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/cashdetail2.html" afterPath="$PROJECT_DIR$/wxapp/forApp/cashdetail2.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/cashdetail3.html" afterPath="$PROJECT_DIR$/wxapp/forApp/cashdetail3.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/marketing.html" afterPath="$PROJECT_DIR$/wxapp/forApp/marketing.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/marketingProfit.html" afterPath="$PROJECT_DIR$/wxapp/forApp/marketingProfit.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/marketing_mercenary.html" afterPath="$PROJECT_DIR$/wxapp/forApp/marketing_mercenary.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/marketing_mercenary2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/progress.html" afterPath="$PROJECT_DIR$/wxapp/forApp/progress.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/forApp/setAgain.html" afterPath="$PROJECT_DIR$/wxapp/forApp/setAgain.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/share/redPackagePay.html" afterPath="$PROJECT_DIR$/wxapp/share/redPackagePay.html" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/css/share/redPackagePay.css" afterPath="$PROJECT_DIR$/wxapp/static/css/share/redPackagePay.css" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/forApp/marketingInvitation.js" afterPath="$PROJECT_DIR$/wxapp/static/js/forApp/marketingInvitation.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/forApp/messageList.js" afterPath="$PROJECT_DIR$/wxapp/static/js/forApp/messageList.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/forApp/qccode.js" afterPath="$PROJECT_DIR$/wxapp/static/js/forApp/qccode.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/forApp/yueSetAgain.js" afterPath="$PROJECT_DIR$/wxapp/static/js/forApp/yueSetAgain.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/forApp/yueSetPassword.js" afterPath="$PROJECT_DIR$/wxapp/static/js/forApp/yueSetPassword.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/plugins/appApi.js" afterPath="$PROJECT_DIR$/wxapp/static/js/plugins/appApi.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/static/js/share/redPackagePay.js" afterPath="$PROJECT_DIR$/wxapp/static/js/share/redPackagePay.js" />
-      <change beforePath="$PROJECT_DIR$/wxapp/vendor/config.js" afterPath="$PROJECT_DIR$/wxapp/vendor/config.js" />
+      <change beforePath="$PROJECT_DIR$/sealtalk/src/communityfile/css/index.css" afterPath="$PROJECT_DIR$/sealtalk/src/communityfile/css/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,8 +71,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,7 +112,9 @@
       <updated>1530156484736</updated>
       <workItem from="1530156486135" duration="7742000" />
       <workItem from="1530176907749" duration="411000" />
-      <workItem from="1530177344440" duration="4108000" />
+      <workItem from="1530177344440" duration="4439000" />
+      <workItem from="1530497323890" duration="1278000" />
+      <workItem from="1531444821683" duration="2229000" />
     </task>
     <task id="LOCAL-00001" summary="目前为最新项目">
       <created>1530161451449</created>
@@ -168,20 +151,41 @@
       <option name="project" value="LOCAL" />
       <updated>1530178824227</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改">
+      <created>1530275275329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1530275275329</updated>
+    </task>
+    <task id="LOCAL-00007" summary="部分优化了支付时的卡顿">
+      <created>1530498098060</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1530498098060</updated>
+    </task>
+    <task id="LOCAL-00008" summary="最后工作">
+      <created>1531447915500</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1531447915500</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12261000" />
+    <option name="totallyTimeSpent" value="16099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45116773" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45116773" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42781317" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42781317" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34076434" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
@@ -209,7 +213,10 @@
     <MESSAGE value="app相关页面" />
     <MESSAGE value="web客户端" />
     <MESSAGE value="官网" />
-    <option name="LAST_COMMIT_MESSAGE" value="官网" />
+    <MESSAGE value="修改" />
+    <MESSAGE value="部分优化了支付时的卡顿" />
+    <MESSAGE value="最后工作" />
+    <option name="LAST_COMMIT_MESSAGE" value="最后工作" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -220,7 +227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -228,7 +234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -244,7 +249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
